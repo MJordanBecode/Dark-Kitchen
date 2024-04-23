@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+footer {
+    background-color:  #DAA520;
+    color: white;
+    text-align: center;
+    font-family: Flamenco;
+    padding: 40px 0;
+    .footer-container {
+        display: flex;
+        justify-content: space-around;
+    }
+    h2{
+        letter-spacing: 2px;
+        font-size: 40px;
+    }
+    i {
+        color: white;
+        font-size: 25px;
+        margin: 0 10px;
+    }
+}
+@media screen and (min-width: 481px){
+    footer {
+        h2{
+            letter-spacing: 2px;
+            font-size: 50px;
+        }
+        i {
+            color: white;
+            font-size: 30px;
+            margin: 0 20px;
+        }
+    }
+}
