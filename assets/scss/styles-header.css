@@ -1,0 +1,53 @@
+@media screen and (max-width: 750px) {
+  .container-button {
+    display: flex;
+    justify-content: center;
+  }
+  button {
+    background-color: burlywood;
+    display: flex;
+    justify-content: flex-end;
+    color: #DAA520; /* Couleur du texte du bouton */
+    border-radius: 20%; /* Ajoute des coins arrondis */
+    text-align: center;
+  }
+  .logo {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 751px) and (max-width: 1800px) {
+  .container-button {
+    display: flex;
+    justify-content: center;
+  }
+  button {
+    background-color: burlywood;
+    justify-content: flex-end;
+    color: brown; /* Couleur du texte du bouton */
+    border-radius: 20%; /* Ajoute des coins arrondis */
+    text-align: center; /* Centre le texte dans le bouton */
+  }
+  .logo {
+    display: flex;
+    justify-content: center;
+  }
+}
+header {
+  background-color: #DAA520;
+}
+header .container-button {
+  display: flex;
+  justify-content: center;
+}
+header button {
+  background-color: burlywood;
+  justify-content: flex-end;
+  color: brown; /* Couleur du texte du bouton */
+  border-radius: 20%; /* Ajoute des coins arrondis */
+  text-align: center; /* Centre le texte dans le bouton */
+}
+header .logo {
+  display: flex;
+  justify-content: center;
+}/*# sourceMappingURL=styles-header.css.map */
