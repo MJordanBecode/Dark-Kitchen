@@ -1,0 +1,13 @@
+body .card-container {
+  display: flex;
+  width: 30%;
+  justify-content: center;
+  border: red 3px solid;
+}
+body .card-container .card img {
+  width: 100%;
+}
+body .card-container .card strong {
+  display: flex;
+  text-align: start;
+}/*# sourceMappingURL=card.css.map */
