@@ -17,7 +17,7 @@ let menu = [
         nom: "Plateau rustique entre amis",
         image: "./assets/img/Plateau-rustique-friends.png",
         category: ["Entrée","Soupe", "Poulet"],
-        price: "4,8",
+        price: "4.8",
         description: "p lorem",
     },
     {
