@@ -1,11 +1,45 @@
+:root {
+  --background-color: #ffffff;
+  --text-color: #EFE7E1;
+  --link-color: #EFE7E1;
+}
+
+.dark-mode {
+  --background-color: #333333;
+  --text-color: #333333;
+  --link-color: #333333;
+}
+
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  position: relative;
+}
+
+a {
+  color: var(--link-color);
+}
+
+main {
+  position: relative;
+}
+
+button {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 40px;
 }
 
 footer {
   background-color: #DAA520;
-  color: white;
+  color: var(--text-color);
   text-align: center;
   font-family: Flamenco;
   padding: 40px 0;
@@ -19,7 +53,7 @@ footer h2 {
   font-size: 40px;
 }
 footer i {
-  color: white;
+  color: var(--link-color);
   font-size: 25px;
   margin: 0 10px;
 }
@@ -30,7 +64,7 @@ footer i {
     font-size: 50px;
   }
   footer i {
-    color: white;
+    color: var(--link-color);
     font-size: 30px;
     margin: 0 20px;
   }
