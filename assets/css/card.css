@@ -11,12 +11,11 @@ body {
   grid-template-columns: 80% 20%;
   padding: 5%;
 }
-body main {
+body main .div-container-menu {
   display: flex;
   flex-wrap: wrap;
 }
-body main .card-container {
-  position: relative;
+body main .div-container-menu .card-container {
   justify-content: center;
   width: 30%;
   height: auto;
@@ -28,23 +27,25 @@ body main .card-container {
   border: 1px solid #f0f0f0;
   padding: 1.667vw 1.25vw;
 }
-body main .card-container .card {
+body main .div-container-menu .card-container .card {
   text-align: center;
 }
-body main .card-container .card:hover img {
+body main .div-container-menu .card-container .card:hover img {
   transform: scale(1.1);
   transition: ease 1.2s;
 }
-body main .card-container .card img {
+body main .div-container-menu .card-container .card img {
   width: 100%;
+  padding: 10%;
 }
-body main .card-container .card p {
+body main .div-container-menu .card-container .card p {
   color: gray;
   padding: 4%;
 }
-body main .card-container .card strong {
+body main .div-container-menu .card-container .card strong {
   display: flex;
   font-size: 1.25rem;
   justify-content: end;
   margin-right: 2%;
+  margin-bottom: 15%;
 }/*# sourceMappingURL=card.css.map */

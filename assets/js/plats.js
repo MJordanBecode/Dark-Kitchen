@@ -37,40 +37,55 @@ let menus = [
   },
 ];
 
-const main = document.createElement("main");
+const main = document.createElement("main")
+const divContainer = document.createElement('div');
+divContainer.classList.add('div-container-menu');
 document.body.appendChild(main);
+main.appendChild(divContainer)
 
-menus.forEach((menu) => {
-    const card = createCard(menu);
-    main.appendChild(card);
-  });
 
-function createCard(menu) {
-  const article = document.createElement("article");
-  const div = document.createElement("div");
 
-  article.classList.add("card-container");
-  div.classList.add("card");
-  article.appendChild(div);
+function createCard(menu){
 
-  const image = document.createElement("img");
-  image.src = menu.image;
-  image.alt = "plat"
-  div.appendChild(image);
 
-  const h2 = document.createElement("h2");
-  h2.textContent = menu.nom;
-  div.appendChild(h2);
+    const article = document.createElement("article");
+    const div = document.createElement("div");
 
-  const p = document.createElement("p");
-  p.textContent = menu.description;
-  div.appendChild(p);
+    article.classList.add("card-container");
+    div.classList.add("card");
+    article.appendChild(div);
 
-  const strong = document.createElement("strong");
-  strong.textContent = menu.price;
-  div.appendChild(strong);
 
-  return article;
+
+
+
+    const image = document.createElement("img")
+    image.src = menu.image
+    div.appendChild(image)
+
+    const h2 = document.createElement("h2")
+    h2.textContent = menu.nom
+    div.appendChild(h2)
+
+    const p = document.createElement("p")
+    p.textContent = menu.description
+    div.appendChild(p)
+
+const strong = document.createElement("strong")
+strong.textContent = menu.price
+div.appendChild(strong)
+
+    return article
+
 }
+
+menus.forEach(menu => {
+
+    const card = createCard(menu);
+    divContainer.appendChild(card)
+
+
+ 
+});
 
 
