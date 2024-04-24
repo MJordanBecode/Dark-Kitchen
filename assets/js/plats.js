@@ -30,7 +30,7 @@ let menus = [
 ]
 
 
-const main = document.createElement("main")
+const main = document.querySelector("main");
 const divContainer = document.createElement('div');
 divContainer.classList.add('div-container-menu');
 document.body.appendChild(main);
@@ -63,6 +63,10 @@ function createCard(menu){
     const p = document.createElement("p")
     p.textContent = menu.description
     div.appendChild(p)
+
+const a = document.createElement("a")
+a.innerHTML = `<i class="fa-solid fa-cart-shopping"></i>`
+div.appendChild(a)
 
 const strong = document.createElement("strong")
 strong.textContent = menu.price
