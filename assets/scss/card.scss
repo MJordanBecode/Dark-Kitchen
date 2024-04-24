@@ -16,7 +16,7 @@ body {
     .div-container-menu{
       display: flex;
       flex-wrap: wrap;
-        .card-container {
+        &.card-container {
           justify-content: center;
           width: 30%;
           height: auto;
@@ -31,7 +31,7 @@ body {
           margin-top: 8%;
           border: 1px solid #f0f0f0;
           padding: 1.667vw 1.25vw;
-          .card {
+          &.card {
             text-align: center;
     
             &:hover {
