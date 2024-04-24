@@ -31,18 +31,24 @@ let menus = [
 
 
 const main = document.createElement("main")
+const divContainer = document.createElement('div');
+divContainer.classList.add
 document.body.appendChild(main);
+main.appendChild(divContainer)
 
 
 
 function createCard(menu){
    
+    
     const article = document.createElement("article");
     const div = document.createElement("div");
     
     article.classList.add("card-container");
     div.classList.add("card");
     article.appendChild(div);
+     
+
 
 
 
@@ -69,6 +75,28 @@ div.appendChild(strong)
 menus.forEach(menu => {
 
     const card = createCard(menu);
-    main.appendChild(card)
+    divContainer.appendChild(card)
+
+
  
 });
+
+
+// Creation of the second div in the main 
+// add filter 
+
+const filterDiv = document.createElement('div'); //creation of the second div
+const h2Filter = document.createElement('h2');
+const formFilter = ;
+const 
+// Add txt in differents element
+h2Filter.innerHTML = "categories"; // add txt in h2
+
+
+
+
+
+// Add different element in the div
+filterDiv.appendChild(h2Filter)
+main.appendChild(filterDiv); // add the div in the main
+
