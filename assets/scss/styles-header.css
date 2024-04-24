@@ -15,6 +15,10 @@
     display: flex;
     justify-content: center;
   }
+  .search {
+    display: flex;
+    justify-content: end;
+  }
 }
 @media screen and (min-width: 751px) and (max-width: 1800px) {
   .container-button {
