@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  padding: 5%;
+}
+body main .div-container-menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+body main .div-container-menu.card-container {
+  justify-content: center;
+  width: 30%;
+  height: auto;
+  border-radius: 30px;
+  background-color: #f5f6f7;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.04), 6px 3px 14px 0px rgba(0, 0, 0, 0.04), 23px 12px 26px 0px rgba(0, 0, 0, 0.03), 53px 27px 35px 0px rgba(0, 0, 0, 0.02), 94px 48px 42px 0px rgba(0, 0, 0, 0.01);
+  margin-right: 3%;
+  margin-top: 8%;
+  border: 1px solid #f0f0f0;
+  padding: 1.667vw 1.25vw;
+}
+body main .div-container-menu.card-container.card {
+  text-align: center;
+}
+body main .div-container-menu.card-container.card:hover img {
+  transform: scale(1.1);
+  transition: ease 1.2s;
+}
+body main .div-container-menu.card-container.card img {
+  width: 100%;
+  padding: 10%;
+}
+body main .div-container-menu.card-container.card p {
+  color: gray;
+  padding: 4%;
+}
+body main .div-container-menu.card-container.card strong {
+  display: flex;
+  font-size: 1.25rem;
+  justify-content: end;
+  margin-right: 2%;
+  margin-bottom: 15%;
+}/*# sourceMappingURL=card.css.map */
