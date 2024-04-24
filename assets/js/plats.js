@@ -32,7 +32,7 @@ let menus = [
 
 const main = document.createElement("main")
 const divContainer = document.createElement('div');
-divContainer.classList.add
+divContainer.classList.add('div-container-menu');
 document.body.appendChild(main);
 main.appendChild(divContainer)
 
