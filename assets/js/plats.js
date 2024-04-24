@@ -38,7 +38,8 @@ main.appendChild(divContainer)
 
 
 
-function createCard(menu){
+
+export function createCard(menu){
    
     
     const article = document.createElement("article");
@@ -75,6 +76,9 @@ div.appendChild(strong)
     return article
 
 }
+
+
+
 
 menus.forEach(menu => {
 
