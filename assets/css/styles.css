@@ -1,6 +1,6 @@
 :root {
   --background-color: #ffffff;
-  --text-color: #EFE7E1;
+  --text-color: #704929;
   --link-color: #EFE7E1;
 }
 
@@ -20,10 +20,6 @@ body {
 
 a {
   color: var(--link-color);
-}
-
-main {
-  position: relative;
 }
 
 button {
