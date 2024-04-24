@@ -16,6 +16,7 @@ body main {
   flex-wrap: wrap;
 }
 body main .card-container {
+  position: relative;
   justify-content: center;
   width: 30%;
   height: auto;
@@ -36,7 +37,6 @@ body main .card-container .card:hover img {
 }
 body main .card-container .card img {
   width: 100%;
-  padding: 10%;
 }
 body main .card-container .card p {
   color: gray;
@@ -47,5 +47,4 @@ body main .card-container .card strong {
   font-size: 1.25rem;
   justify-content: end;
   margin-right: 2%;
-  margin-bottom: 15%;
 }/*# sourceMappingURL=card.css.map */
