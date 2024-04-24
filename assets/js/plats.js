@@ -82,21 +82,3 @@ menus.forEach(menu => {
 });
 
 
-// Creation of the second div in the main 
-// add filter 
-
-const filterDiv = document.createElement('div'); //creation of the second div
-const h2Filter = document.createElement('h2');
-const formFilter = ;
-const 
-// Add txt in differents element
-h2Filter.innerHTML = "categories"; // add txt in h2
-
-
-
-
-
-// Add different element in the div
-filterDiv.appendChild(h2Filter)
-main.appendChild(filterDiv); // add the div in the main
-
