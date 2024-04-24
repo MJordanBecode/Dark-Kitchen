@@ -82,3 +82,24 @@ menus.forEach(menu => {
 });
 
 
+/* div filter */
+
+//declaration of const 
+const div_filter = document.createElement('aside');
+const h2_filter = document.createElement('h2');
+const title_filter = document.createElement('h2');
+const form_title = document.createElement('form');
+
+
+
+//add element in the aside 
+
+div_filter.appendChild(h2_filter);
+div_filter.appendChild(title_filter);
+
+main.appendChild(div_filter); //add element in main
+
+// add text in differents element 
+
+h2_filter.innerText = 'Filter';
+title_filter.innerText = 'Availability';
