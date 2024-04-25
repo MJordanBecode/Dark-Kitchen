@@ -12,7 +12,7 @@ let total = 0;
 // Open modal
 function openCartModal() {
   // Assurez-vous que la fenêtre modale est cachée avant de la faire glisser
-  cartModal.style.display = "none";
+  // cartModal.style.display = "none";
 
   // Faites glisser la fenêtre modale depuis la gauche
   cartModal.style.left = "-100%"; // Démarrez la fenêtre modale en dehors de l'écran à gauche

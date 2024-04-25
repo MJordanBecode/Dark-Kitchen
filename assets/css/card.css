@@ -4,6 +4,7 @@
   text-decoration: none;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  list-style-type: none;
 }
 
 body {
@@ -40,10 +41,40 @@ body main .div-container-menu .card-container .card p {
   color: gray;
   padding: 4%;
 }
-body main .div-container-menu .card-container .card strong {
+body main .div-container-menu .card-container .card .parent-div {
   display: flex;
-  font-size: 1.25rem;
-  justify-content: end;
-  margin-right: 2%;
-  margin-bottom: 15%;
+  justify-content: space-between;
+  align-items: center;
+}
+body main .div-container-menu .card-container .card .parent-div .quantite-content {
+  background: #F0F0F0;
+  display: flex;
+  gap: 8px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 5px;
+  padding: 0.833vw;
+  height: 2.917vw;
+}
+body main .div-container-menu .card-container .card .parent-div .quantite-content input {
+  border: none;
+  padding: 0;
+  background: transparent;
+  text-align: center;
+}
+body main .div-container-menu .card-container .card .parent-div .quantite-content i {
+  font-size: 1rem;
+}
+body main .div-container-menu .card-container .card .parent-div .price-content {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+body main .div-container-menu .card-container .card .parent-div .price-content h5 {
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+body main .div-container-menu .card-container .card .parent-div .price-content a {
+  cursor: pointer;
 }/*# sourceMappingURL=card.css.map */

@@ -41,7 +41,7 @@ main.appendChild(divContainer)
 
 export function createCard(menu){
    
-    
+    const sideMenu = document.querySelectorAll("sidebar-menu")
     const article = document.createElement("article");
     const div = document.createElement("div");
     
@@ -66,27 +66,80 @@ export function createCard(menu){
     p.textContent = menu.description
     div.appendChild(p)
 
+
+
+const parentDiv = document.createElement("div");
+parentDiv.classList.add("parent-div");
+
+
+div.appendChild(parentDiv);
+
+
+const iconsDiv = document.createElement("div");
+iconsDiv.classList.add("quantite-content");
+parentDiv.appendChild(iconsDiv);
+
+
+const iconPlus = document.createElement("i");
+iconPlus.classList.add("fa-solid", "fa-plus");
+iconsDiv.appendChild(iconPlus);
+
+iconPlus.addEventListener("click", function() {
+    input.value = parseInt(input.value) + 1; 
+});
+
+
+
+const input = document.createElement("input")
+input.type = "text"
+input.value = "1"
+input.maxLength = "2"
+input.size = "1"
+
+iconsDiv.appendChild(input)
+const iconMoins = document.createElement("i");
+iconMoins.classList.add("fa-solid", "fa-minus");
+iconsDiv.appendChild(iconMoins);
+
+iconMoins.addEventListener("click", function() {
+    if (parseInt(input.value) > 1) { // Vérifie si la valeur est supérieure à 0
+        input.value = parseInt(input.value) - 1; // Diminue la valeur de 1
+    }
+});
+
+
+
+
+const contentDiv = document.createElement("div");
+contentDiv.classList.add("price-content");
+const strong = document.createElement("h5");
+strong.textContent = menu.price;
+contentDiv.appendChild(strong);
+
+parentDiv.appendChild(contentDiv);
+
+
+    
+   
+
+
+
 const a = document.createElement("a")
-a.innerHTML = `<i class="fa-solid fa-cart-shopping"></i>`
-div.appendChild(a)
-
-a.addEventListener("click", function (){
-
-    const sidebar = document.querySelector(".sidebar-menu")
-
-    setTimeout(() => {
-        sidebar.classList.toggle("show");
-    }, 50);
+a.classList.add("shoppingcart")
+const img = document.createElement("img")
+img.src = "https://uiparadox.co.uk/public/templates/royalfare/assets/media/icons/shopping-cart.png";
+a.appendChild(img)
+contentDiv.appendChild(a);
 
 
-    sidebar.style.display = "block"
+a.addEventListener("click", function() {
+    // Faites apparaître le menu latéral lorsque le lien est cliqué
+    asideElement.style.right = "0px";
+});
 
 
-})
 
-const strong = document.createElement("strong")
-strong.textContent = menu.price
-div.appendChild(strong)
+
 
     return article
 
@@ -127,3 +180,6 @@ export function createAside () {
 }
 
 const asideElement = createAside ()
+
+
+

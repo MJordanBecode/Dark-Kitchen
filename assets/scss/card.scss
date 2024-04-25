@@ -4,7 +4,7 @@
   text-decoration: none;
   box-sizing: border-box;
   scroll-behavior: smooth;
-
+list-style-type: none;
   }
   
   body {
@@ -48,17 +48,61 @@
                 color: gray;
                 padding: 4%;
               }
-  
-              strong {
-                display: flex;
-                font-size: 1.25rem;
-                justify-content: end;
-                margin-right: 2%;
-                margin-bottom: 15%;
+
+            .parent-div{
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
+                .quantite-content {
+
+                  background: #F0F0F0;
+                  display: flex;
+                  gap: 8px;
+                  width: fit-content;
+                  border-radius: 5px;
+                  padding: 0.833vw;
+                  height: 2.917vw;
+
+                  input {
+                    border: none;
+                    padding: 0;
+                    background: transparent;
+                    text-align: center;
+                  }
+
+                i{
+                  font-size: 1rem;
+                }
               }
+
+             .price-content{
+            
+              display: flex;
+              align-items: center;
+              gap: 24px;
+
+              h5 {
+                display: flex;
+                font-size: 1.4rem;
+                font-weight: 600;
+
+              }
+
+
+              a{
+                cursor: pointer;
+             
+              }
+
+
+            }
+  
+            
+             }
             }
           }
         }
       }
-  
-  }
+    }
+
