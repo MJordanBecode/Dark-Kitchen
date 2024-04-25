@@ -1,6 +1,6 @@
 // -----------------------ecran gsm------------------------------------
 @media screen and (max-width: 750px){
-    .container-button {
+    .container {
         display: flex;
         justify-content: center;
         
@@ -23,10 +23,11 @@
         justify-content: end;
     }
     
+    
 }
 // -----------------------ecran tablette------------------------------------
 @media screen and (min-width: 751px) and (max-width: 1800px){
-    .container-button {
+    .container {
         display: flex;
         justify-content: center;
         
@@ -64,10 +65,11 @@ header {
        
 
     }
-    .logo{
+    nav{
         display: flex;
         justify-content: center;
     }
+    
     
     
 }
