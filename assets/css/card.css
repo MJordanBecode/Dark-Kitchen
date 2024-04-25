@@ -1,13 +1,9 @@
 :root {
-  --card-background-color: #333333;
-  --card-text-color: #333333;
-  --card-link-color: #333333;
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .dark-mode {
-  --card-background-color: #ffffff;
-  --card-text-color: #704929;
-  --card-link-color: #EFE7E1;
+  --card-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
 }
 
 * {
@@ -22,44 +18,62 @@ body {
   padding: 5%;
 }
 body main {
-  display: grid;
-  grid-template-columns: 80% 20%;
-}
-body main .div-container-menu {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
 }
 body main .div-container-menu .card-container {
   justify-content: center;
-  width: 30%;
-  height: auto;
   border-radius: 30px;
-  background-color: var(--card-background-color);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-right: 3%;
-  margin-top: 8%;
-  border: 1px solid #f0f0f0;
-  padding: 1.667vw 1.25vw;
+  color: #DAA520;
+  background-color: #EFE7E1;
+  box-shadow: var(--card-shadow);
+  margin-bottom: 15px;
+  height: 100vh;
+  width: 400px;
 }
 body main .div-container-menu .card-container .card {
   text-align: center;
 }
 body main .div-container-menu .card-container .card:hover img {
-  transform: scale(1.1);
-  transition: ease 0.2s;
+  transform: scale(1.15);
+  transition: ease 0.5s;
 }
 body main .div-container-menu .card-container .card img {
-  width: 100%;
-  padding: 10%;
+  width: 80%;
+  padding: 8%;
+}
+body main .div-container-menu .card-container .card h2 {
+  font-family: flamenco;
 }
 body main .div-container-menu .card-container .card p {
-  color: gray;
-  padding: 4%;
+  color: black;
+  padding: 10px;
+  font-weight: 400;
+  font-size: medium;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
 }
 body main .div-container-menu .card-container .card strong {
   display: flex;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   justify-content: end;
   margin-right: 2%;
   margin-bottom: 15%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+}
+
+@media screen and (min-width: 481px) {
+  main {
+    justify-content: flex-start;
+    width: 70%;
+    margin: 0;
+  }
+  main .div-container-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex: 1 0 50%;
+    box-sizing: border-box;
+    margin: 10px;
+  }
 }/*# sourceMappingURL=card.css.map */

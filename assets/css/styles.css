@@ -1,7 +1,7 @@
 :root {
-  --background-color: #ffffff;
+  --background-color: #EFE7E1;
   --text-color: #704929;
-  --link-color: #EFE7E1;
+  --link-color: #704929;
 }
 
 .dark-mode {
@@ -33,13 +33,11 @@ button {
   font-size: 40px;
   padding: 20px;
 }
-
-.fa-sun {
+button .fa-sun {
   color: #333333;
 }
-
-.fa-moon {
-  color: #ffffff;
+button .fa-moon {
+  color: #EFE7E1;
 }
 
 footer {
@@ -56,6 +54,9 @@ footer .footer-container {
 footer h2 {
   letter-spacing: 2px;
   font-size: 40px;
+}
+footer h3 {
+  margin: 20px 0;
 }
 footer i {
   color: var(--link-color);

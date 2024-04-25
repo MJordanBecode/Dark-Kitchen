@@ -77,7 +77,7 @@ document.body.appendChild(darkModeButton);
 
 darkModeButton.addEventListener('click', function() {
   document.body.classList.toggle('dark-mode');
-  if (body.classList.contains('dark-mode')){
+  if (document.body.classList.contains('dark-mode')){
     darkIcon.classList.remove('fa-sun');
     darkIcon.classList.add('fa-moon');  
   } else{
@@ -85,3 +85,4 @@ darkModeButton.addEventListener('click', function() {
     darkIcon.classList.add('fa-sun');
   }
 });
+
