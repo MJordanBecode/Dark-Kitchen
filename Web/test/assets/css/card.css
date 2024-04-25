@@ -1,3 +1,21 @@
+/*aside*/
+aside {
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  width: 25%;
+}
+aside .legend_filter {
+  text-align: center;
+}
+aside h2 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+aside form .legend_filter {
+  color: rgb(0, 0, 0);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,15 +25,14 @@
 }
 
 body {
-  display: grid;
-  grid-template-columns: 80% 20%;
+  display: flex;
   padding: 5%;
 }
 body main .div-container-menu {
   display: flex;
   flex-wrap: wrap;
 }
-body main .div-container-menu.card-container {
+body main .div-container-menu .card-container {
   justify-content: center;
   width: 30%;
   height: auto;
@@ -27,22 +44,22 @@ body main .div-container-menu.card-container {
   border: 1px solid #f0f0f0;
   padding: 1.667vw 1.25vw;
 }
-body main .div-container-menu.card-container.card {
+body main .div-container-menu .card-container .card {
   text-align: center;
 }
-body main .div-container-menu.card-container.card:hover img {
+body main .div-container-menu .card-container .card:hover img {
   transform: scale(1.1);
   transition: ease 1.2s;
 }
-body main .div-container-menu.card-container.card img {
+body main .div-container-menu .card-container .card img {
   width: 100%;
   padding: 10%;
 }
-body main .div-container-menu.card-container.card p {
+body main .div-container-menu .card-container .card p {
   color: gray;
   padding: 4%;
 }
-body main .div-container-menu.card-container.card strong {
+body main .div-container-menu .card-container .card strong {
   display: flex;
   font-size: 1.25rem;
   justify-content: end;

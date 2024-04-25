@@ -1,0 +1,29 @@
+
+/*aside*/
+        aside{
+            display: flex;
+            flex-direction: column;
+            background-color: red;
+            width: 25%;
+
+            input{
+                margin: 4px 0 0;
+                line-height: normal;
+                width: 20px;
+                height: 20px;
+            }
+            .legend_filter{
+                text-align: center;
+            }
+
+            h2{
+                margin-bottom: 10px;
+                text-align: center;
+            }
+            & form{
+                .legend_filter{
+                    color: rgb(0, 0, 0);
+                }
+            }
+        }
+

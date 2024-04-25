@@ -1,3 +1,21 @@
+/*aside*/
+aside {
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  width: 25%;
+}
+aside .legend_filter {
+  text-align: center;
+}
+aside h2 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+aside form .legend_filter {
+  color: rgb(0, 0, 0);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +25,7 @@
 }
 
 body {
+  display: flex;
   padding: 5%;
 }
 body main .div-container-menu {
@@ -46,4 +65,4 @@ body main .div-container-menu .card-container .card strong {
   justify-content: end;
   margin-right: 2%;
   margin-bottom: 15%;
-}/*# sourceMappingURL=card.css.map */
+}

@@ -2,7 +2,7 @@ let menus = [
     {
         nom: "Burger Chicken",
         image: "https://uiparadox.co.uk/public/templates/royalfare/assets/media/products/p_8.png",
-        category: ["Plats", "Poulet"],
+        category: ["Plats", "Poulet", "burger"],
         price: "6.99 €",
         description: "Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.",
     },
@@ -86,5 +86,10 @@ menus.forEach(menu => {
     divContainer.appendChild(card)
 
 });
+
+
+
+
+
 
 
