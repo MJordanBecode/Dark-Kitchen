@@ -45,6 +45,7 @@ export function createCard(menu){
     const article = document.createElement("article");
     const div = document.createElement("div");
     
+    
     article.classList.add("card-container");
     div.classList.add("card");
     article.appendChild(div);
@@ -69,6 +70,20 @@ const a = document.createElement("a")
 a.innerHTML = `<i class="fa-solid fa-cart-shopping"></i>`
 div.appendChild(a)
 
+a.addEventListener("click", function (){
+
+    const sidebar = document.querySelector(".sidebar-menu")
+
+    setTimeout(() => {
+        sidebar.classList.toggle("show");
+    }, 50);
+
+
+    sidebar.style.display = "block"
+
+
+})
+
 const strong = document.createElement("strong")
 strong.textContent = menu.price
 div.appendChild(strong)
@@ -76,8 +91,6 @@ div.appendChild(strong)
     return article
 
 }
-
-
 
 
 menus.forEach(menu => {
@@ -90,3 +103,27 @@ menus.forEach(menu => {
 });
 
 
+
+
+export function createAside () {
+    const aside = document.createElement("aside")
+    const h2 = document.createElement("h2")
+    h2.textContent = "test"
+    aside.classList.add("sidebar-menu")
+    const ul = document.createElement("ul")
+    const li = document.createElement("li")
+
+    aside.appendChild(h2)
+    aside.appendChild(ul)
+    ul.appendChild(li)
+
+
+    
+
+
+
+    document.body.appendChild(aside)
+    return aside
+}
+
+const asideElement = createAside ()
