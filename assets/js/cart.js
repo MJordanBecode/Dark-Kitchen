@@ -11,9 +11,18 @@ let total = 0;
 
 // Open modal
 function openCartModal() {
-  cartModal.style.display = "block";
+  // Assurez-vous que la fenêtre modale est cachée avant de la faire glisser
+  cartModal.style.display = "none";
+
+  // Faites glisser la fenêtre modale depuis la gauche
+  cartModal.style.left = "-100%"; // Démarrez la fenêtre modale en dehors de l'écran à gauche
+  cartModal.style.display = "block"; // Affichez la fenêtre modale
+  // Animez la fenêtre modale pour qu'elle glisse depuis la gauche
+  cartModal.style.transition = "left 0.5s ease-in-out";
+  cartModal.style.left = "0"; // Déplacez la fenêtre modale à la position 0 (entièrement visible)
   updateCartModalContent();
 }
+
 
 // Close modal
 function closeCartModal() {
