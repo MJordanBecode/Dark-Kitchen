@@ -1,3 +1,11 @@
+:root {
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode {
+  --card-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -46,4 +54,20 @@ body main .div-container-menu .card-container .card strong {
   justify-content: end;
   margin-right: 2%;
   margin-bottom: 15%;
+}
+
+@media screen and (min-width: 481px) {
+  main {
+    justify-content: flex-start;
+    width: 70%;
+    margin: 0;
+  }
+  main .div-container-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex: 1 0 50%;
+    box-sizing: border-box;
+    margin: 10px;
+  }
 }
