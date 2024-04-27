@@ -31,7 +31,7 @@ body {
           background-color: #EFE7E1;
           box-shadow: var(--card-shadow);
           margin-bottom: 15px;
-          height: 100vh;
+          // height: 100vh;
           width: 400px;
 
           .card {
@@ -86,7 +86,7 @@ body {
     .div-container-menu{
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: space-between;
       flex: 1 0 50%;
       box-sizing: border-box;
       margin: 10px;
