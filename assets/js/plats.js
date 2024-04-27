@@ -17,7 +17,7 @@ let menus = [
         nom: "Pilon de Poulet",
         image: "https://image.noelshack.com/fichiers/2024/17/2/1713905565-pngegg-5.png",
         category: ["Entrée","Soupe", "Poulet"],
-        price: "4.8 €",
+        price: "9.99 €",
         description: "Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.",
     },
     {
@@ -76,11 +76,7 @@ export function createCard(menu) {
             input.value = parseInt(input.value) - 1;
             input.dataset.quantity = input.value;
             menu.quantity = parseInt(input.value);
-            if (parseInt(input.value) === 1) {
-                createAside(menus);
-            } else if (parseInt(input.value) === 0) {
-                createAside(menus); // Appel à createAside lorsque la quantité est réduite à 0
-            }
+            updateAside(menus); // Mettre à jour la barre latérale après modification de la quantité
         }
     });
 
@@ -100,16 +96,14 @@ export function createCard(menu) {
         input.value = parseInt(input.value) + 1; 
         input.dataset.quantity = input.value; 
         menu.quantity = parseInt(input.value); 
-        if (parseInt(input.value) === 1) {
-            createAside(menus);
-        }
+        updateAside(menus); // Mettre à jour la barre latérale après modification de la quantité
     });
 
     const contentDiv = document.createElement("div");
     contentDiv.classList.add("price-content");
-    const strong = document.createElement("h5");
-    strong.textContent = menu.price;
-    contentDiv.appendChild(strong);
+    const h5 = document.createElement("h5");
+    h5.textContent = menu.price;
+    contentDiv.appendChild(h5);
     parentDiv.appendChild(contentDiv);
 
     const a = document.createElement("a");
@@ -144,21 +138,57 @@ export function createAside(menus) {
 
     // Créez une nouvelle barre latérale
     const aside = document.createElement("aside");
+    const divBorder = document.createElement("div")
+    divBorder.classList.add("border-grey")
     aside.classList.add("sidebar-menu");
     const h2 = document.createElement("h2");
     h2.textContent = "Shop";
     aside.appendChild(h2);
+    aside.appendChild(divBorder)
 
     // Créez une liste pour les articles avec une quantité de 1
     const ul = document.createElement("ul");
     menus.forEach(menu => {
-        if (menu.quantity === 1) {
+        if (menu.quantity >= 1) {
             const li = document.createElement("li");
             const image = document.createElement("img");
             image.src = menu.image;
             image.alt = menu.nom;
+            const liBorder = document.createElement("li")
+            liBorder.classList.add("border-div-li")
+            const div = document.createElement("div")
+            const newDiv = document.createElement("div")
+            newDiv.classList.add("prix")
+            const h2 = document.createElement("h2")
+            div.classList.add("text-produit")
+            h2.textContent = menu.nom
+            const h5 = document.createElement("h5")
+            h5.textContent = menu.price
+
+            const iconsDiv = document.createElement("div");
+            iconsDiv.classList.add("quantite-content");
+            const iconMoins = document.createElement("i");
+            iconMoins.classList.add("fa-solid", "fa-minus");
+            const input = document.createElement("input")
+            input.type = "text"
+            input.value = menu.quantity; 
+            input.maxLength = "2"
+            input.size = "1"
+
+            const iconPlus = document.createElement("i");
+            iconPlus.classList.add("fa-solid", "fa-plus");
+
             li.appendChild(image);
+            li.appendChild(div)
+            div.appendChild(h2)
+            div.appendChild(newDiv)
+            iconsDiv.appendChild(iconMoins)
+            iconsDiv.appendChild(input)
+            iconsDiv.appendChild(iconPlus)
+            newDiv.appendChild(iconsDiv)
+            newDiv.appendChild(h5)
             ul.appendChild(li);
+            ul.appendChild(liBorder)
         }
     });
 
@@ -166,3 +196,12 @@ export function createAside(menus) {
     document.body.appendChild(aside);
 }
 
+// Fonction pour mettre à jour la barre latérale avec les nouvelles quantités
+function updateAside(menus) {
+    const asideElement = document.querySelector(".sidebar-menu");
+    if (asideElement) {
+        createAside(menus);
+    }
+}
+
+const asideElement = createAside(menus);
