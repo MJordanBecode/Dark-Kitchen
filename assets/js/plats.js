@@ -1,3 +1,11 @@
+// {
+//     nom: "",
+//     image: "",
+//     category: [""],
+//     price: "17.90 €",
+//     description: "Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.",
+// },
+
 let menus = [
     {
         nom: "Burger Chicken",
@@ -7,10 +15,24 @@ let menus = [
         description: "Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.",
     },
     {
+        nom: "Burger Chicken",
+        image: "https://e7.pngegg.com/pngimages/769/392/png-clipart-hamburger-chicken-sandwich-chicken-fingers-chicken-nugget-french-fries-burger-and-sandwich-food-recipe-thumbnail.png",
+        category: ["Burger"],
+        price: "17.90 €",
+        description: "Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.",
+    },
+    {
         nom: "Poulet tikka masala",
         image: "https://image.noelshack.com/fichiers/2024/17/2/1713905559-pngegg-3.png",
-        category: ["Poulet","test"],
+        category: ["Salade"],
         price: "11.99 €",
+        description: "Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.",
+    },
+    {
+        nom: "",
+        image: "",
+        category: [""],
+        price: "17.90 €",
         description: "Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.",
     },
     {
@@ -21,16 +43,44 @@ let menus = [
         description: "Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.",
     },
     {
+        nom: "",
+        image: "",
+        category: ["Dessert"],
+        price: "17.90 €",
+        description: "Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.",
+    },
+    {
         nom: "Poulet de la famille",
         image: "https://image.noelshack.com/fichiers/2024/17/2/1713905572-pngegg.png",
         category: ["Poulet"],
         price: "17.90 €",
         description: "Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.",
     },
+    {
+        nom: "",
+        image: "",
+        category: [""],
+        price: "17.90 €",
+        description: "Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.",
+    },
+    {
+        nom: "Poulet de la famille",
+        image: "https://image.noelshack.com/fichiers/2024/17/2/1713905572-pngegg.png",
+        category: ["tacos"],
+        price: "17.90 €",
+        description: "Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.",
+    },
+    {
+        nom: "",
+        image: "",
+        category: [""],
+        price: "17.90 €",
+        description: "Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.",
+    },
 ]
 
 
-const main = document.querySelector("main");
+const main = document.createElement("main");
 const divContainer = document.createElement('div');
 divContainer.classList.add("div-container-menu");
 document.body.appendChild(main);
@@ -50,7 +100,7 @@ export function createCard(menu){
     article.appendChild(div);
      
 
-
+    div.setAttribute("id", menu.category);
 
 
     const image = document.createElement("img")
@@ -64,6 +114,8 @@ export function createCard(menu){
     const p = document.createElement("p")
     p.textContent = menu.description
     div.appendChild(p)
+
+    
 
 const a = document.createElement("a")
 a.innerHTML = `<i class="fa-solid fa-cart-shopping"></i>`
@@ -165,9 +217,9 @@ label_salade.setAttribute("for", "salade");
 label_salade.innerText = 'Salade'; // Text next to the checkbox
 
 //tacos
-input_tacos_filter.setAttribute("type", "checkbox"); input_tacos_filter.setAttribute("id", "tacos"); input_tacos_filter.setAttribute("name", "tacos"); //add checkBox + id + name
-label_tacos.setAttribute("for", "tacos");
-label_tacos.innerText = 'tacos'; // Text next to the checkbox
+input_tacos_filter.setAttribute("type", "checkbox"); input_tacos_filter.setAttribute("id", "Poulet"); input_tacos_filter.setAttribute("name", "Poulet"); //add checkBox + id + name
+label_tacos.setAttribute("for", "Poulet");
+label_tacos.innerText = 'Poulet'; // Text next to the checkbox
 
 //soft
 input_soft_filter.setAttribute("type", "checkbox"); input_soft_filter.setAttribute("id", "soft"); input_soft_filter.setAttribute("name", "soft"); //add checkBox + id + name
@@ -181,24 +233,43 @@ label_dessert.innerText = 'dessert'; // Text next to the checkbox
 
 
 //Creation of the filter 
-
-function filter_card() {
-    let safeCategories = []; // Déclarer le tableau en dehors de la boucle pour qu'il ne soit pas réinitialisé à chaque itération
-
-    for (let i = 0; i < menus.length; i++) {
-        safeCategories.push(menus[i].category); // Ajouter la catégorie actuelle à safeCategories
-    }
-    
-    console.log(safeCategories); // Afficher le tableau complet après la boucle
-
-    let burger = menus.filter(function(menu) {
-        return menu.category === 'burger'; // Filtrer les menus dont la catégorie est 'burger'
+/*
+function filter_card(category) {
+    let cardContainers = document.querySelectorAll(".card-container")
+    let bb = cardContainers.querySelector(".card").getAttribute("id");
+console.log(category)
+console.log(bb)
+bb.forEach(function(cardContainer) {
+        if (bb.includes(category)) {
+            cardContainer.style.display = "block";
+        } else {
+            cardContainer.style.display = "none";
+        }
     });
-    console.log(burger);
-
-    return safeCategories;
 }
+*/
+function filter_card(category) {
+    const cardContainers = document.querySelectorAll(".card-container");
+    console.log(cardContainers)
 
+
+
+    cardContainers.forEach(function(cardContainers) {
+
+        const cardElement = cardContainers.querySelector(".card");
+        const kaka = cardElement.getAttribute("id")
+        console.log(cardElement)
+        console.log(kaka)
+
+        if(category.includes(kaka)){
+            
+        }else{
+            cardContainers.style.display = "none";
+        }
+
+       // document.querySelectorAll(".card-container")[1].querySelector(".card").getAttribute("id")
+    });
+}
 
 
 
@@ -206,15 +277,44 @@ function filter_card() {
 //creation event of checkbox 
 
 let burgerCheckBox = document.getElementById("burger");
-
+let saladeCheckBox = document.getElementById("salade");
+let tacosCheckBox = document.getElementById("tacos");
+let softCheckBox = document.getElementById("soft");
+let dessertCheckBox = document.getElementById("dessert");
 //add event 
 burgerCheckBox.addEventListener('change', function(event){
     if(event.target.checked){
-         console.log("bonjour l'homme le plus beau de la terre");
-    } else{
-        //traitement 
+      filter_card("Burger")
+    } 
+    else{
+        cardContainers.style.display = "flex";
     }
+       
 });
-filter_card ();
+saladeCheckBox.addEventListener('change', function(event){
+    if(event.target.checked){
+      filter_card("Salade")
+    } 
+       
+});
+tacosCheckBox.addEventListener('change', function(event){
+    if(event.target.checked){
+      filter_card("Poulet")
+    } 
+       
+});
+softCheckBox.addEventListener('change', function(event){
+    if(event.target.checked){
+      filter_card("Soft")
+    } 
+       
+});
+dessertCheckBox.addEventListener('change', function(event){
+    if(event.target.checked){
+      filter_card("Dessert")
+    } 
+       
+});
+
 // let test = filter_card();
 // console.log(test);
