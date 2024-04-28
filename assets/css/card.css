@@ -12,53 +12,74 @@
   text-decoration: none;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  list-style-type: none;
 }
 
-body {
+body main .div-container-menu {
   padding: 5%;
-}
-body main {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
 }
 body main .div-container-menu .card-container {
   justify-content: center;
+  width: 30%;
+  height: auto;
   border-radius: 30px;
-  color: #DAA520;
-  background-color: #EFE7E1;
-  box-shadow: var(--card-shadow);
-  margin-bottom: 15px;
-  width: 400px;
+  background-color: #f5f6f7;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.04), 6px 3px 14px 0px rgba(0, 0, 0, 0.04), 23px 12px 26px 0px rgba(0, 0, 0, 0.03), 53px 27px 35px 0px rgba(0, 0, 0, 0.02), 94px 48px 42px 0px rgba(0, 0, 0, 0.01);
+  margin-right: 3%;
+  margin-top: 8%;
+  border: 1px solid #f0f0f0;
+  padding: 1.667vw 1.25vw;
 }
 body main .div-container-menu .card-container .card {
   text-align: center;
 }
 body main .div-container-menu .card-container .card:hover img {
-  transform: scale(1.15);
-  transition: ease 0.5s;
+  transform: scale(1.1);
+  transition: ease 1.2s;
 }
 body main .div-container-menu .card-container .card img {
-  width: 80%;
-  padding: 8%;
-}
-body main .div-container-menu .card-container .card h2 {
-  font-family: flamenco;
+  width: 100%;
+  padding: 10%;
 }
 body main .div-container-menu .card-container .card p {
-  color: black;
-  padding: 10px;
-  font-weight: 400;
-  font-size: medium;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+  color: gray;
+  padding: 4%;
 }
-body main .div-container-menu .card-container .card strong {
+body main .div-container-menu .card-container .card .parent-div {
   display: flex;
-  font-size: 1.1rem;
-  justify-content: end;
-  margin-right: 2%;
-  margin-bottom: 15%;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+  justify-content: space-between;
+  align-items: center;
+}
+body main .div-container-menu .card-container .card .parent-div .quantite-content {
+  background: #f0f0f0;
+  display: flex;
+  gap: 8px;
+  width: fit-content;
+  border-radius: 5px;
+  padding: 0.833vw;
+  height: 2.917vw;
+}
+body main .div-container-menu .card-container .card .parent-div .quantite-content input {
+  border: none;
+  padding: 0;
+  background: transparent;
+  text-align: center;
+}
+body main .div-container-menu .card-container .card .parent-div .quantite-content i {
+  font-size: 1rem;
+}
+body main .div-container-menu .card-container .card .parent-div .price-content {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+h5 {
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 
 @media screen and (min-width: 481px) {
@@ -74,82 +95,5 @@ body main .div-container-menu .card-container .card strong {
     flex: 1 0 50%;
     box-sizing: border-box;
     margin: 10px;
-  }
-}
-:root {
-  --background-color: #EFE7E1;
-  --text-color: #704929;
-  --link-color: #704929;
-}
-
-.dark-mode {
-  --background-color: #333333;
-  --text-color: #333333;
-  --link-color: #333333;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  position: relative;
-}
-
-a {
-  color: var(--link-color);
-}
-
-button {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  background-color: transparent;
-  border: none;
-  color: inherit;
-  cursor: pointer;
-  font-size: 40px;
-  padding: 20px;
-}
-button .fa-sun {
-  color: #333333;
-}
-button .fa-moon {
-  color: #EFE7E1;
-}
-
-footer {
-  background-color: #DAA520;
-  color: var(--text-color);
-  text-align: center;
-  font-family: Flamenco;
-  padding: 40px 0;
-}
-footer .footer-container {
-  display: flex;
-  justify-content: space-around;
-}
-footer h2 {
-  letter-spacing: 2px;
-  font-size: 40px;
-}
-footer h3 {
-  margin: 20px 0;
-}
-footer i {
-  color: var(--link-color);
-  font-size: 25px;
-  margin: 0 10px;
-}
-
-@media screen and (min-width: 481px) {
-  footer h2 {
-    letter-spacing: 2px;
-    font-size: 50px;
-  }
-  footer i {
-    color: var(--link-color);
-    font-size: 30px;
-    margin: 0 20px;
   }
 }

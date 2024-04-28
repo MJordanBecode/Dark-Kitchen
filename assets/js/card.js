@@ -1,134 +1,88 @@
-const cartModal = document.getElementById("cartModal");
-const cartList = document.getElementById("cartItems");
-const cartTotal = document.getElementById("cartTotal");
-const closeCartModalHandler = document.getElementById("closeModal");
-const shoppingCartButton = document.querySelector(".shoppingcart");
-const addButtons = document.querySelectorAll(".cart");
-const total_count = document.querySelector(".total_count"); // Sélectionnez la span pour le nombre total d'articles
+// card.js
 
-let cart = [];
-let total = 0;
+import { updateAside } from './modal.js';
 
-// Open modal
-function openCartModal() {
-  cartModal.style.display = "block";
-  updateCartModalContent();
-}
+export function createCard(menu, menus) {
+    const article = document.createElement("article");
+    const div = document.createElement("div");
+    article.classList.add("card-container");
+    div.classList.add("card");
+    article.appendChild(div);
 
-// Close modal
-function closeCartModal() {
-  cartModal.style.display = "none";
-}
+    const image = document.createElement("img");
+    image.src = menu.image;
+    div.appendChild(image);
 
-shoppingCartButton.addEventListener("click", openCartModal);
-closeCartModalHandler.addEventListener("click", closeCartModal);
+    const h2 = document.createElement("h2");
+    h2.textContent = menu.nom;
+    div.appendChild(h2);
 
-for (let button of addButtons) {
-  button.addEventListener(
-    "click",
-    function () {
-      addToCart(button.closest(".card"));
-      updateCartModalContent();
-    },
-    { once: true }
-  );
-}
+    const p = document.createElement("p");
+    p.textContent = menu.description;
+    div.appendChild(p);
 
-// Add item to cart
-function addToCart(carte) {
-  let cartName = carte.querySelector(".content > .titre").innerText;
-  let cartPrice = parseInt(
-    carte.querySelector(".content > .body > .underPict > .prix > .priceOnly")
-      .innerText
-  );
+    const parentDiv = document.createElement("div");
+    parentDiv.classList.add("parent-div");
+    div.appendChild(parentDiv);
 
-  const existingItem = cart.find((item) => item.name === cartName);
+    const iconsDiv = document.createElement("div");
+    iconsDiv.classList.add("quantite-content");
+    parentDiv.appendChild(iconsDiv);
 
-  if (existingItem) {
-    existingItem.quantity += 1;
-  } else {
-    cart.push({ name: cartName, price: cartPrice, quantity: 1 });
-  }
-  total += cartPrice;
-  updateCartModalContent();
-}
+    const iconMoins = document.createElement("i");
+    iconMoins.classList.add("fa-solid", "fa-minus");
+    iconsDiv.appendChild(iconMoins);
 
-// Update the cart modal
-function updateCartModalContent() {
-  const cartTable = document.getElementById("cartTable");
-  const cartBody = document.getElementById("cartItems");
-  cartBody.innerHTML = "";
-  let updatedTotal = 0; // Initialiser le total à l'extérieur de la boucle
-
-  cart.forEach((item, index) => {
-    let row = cartBody.insertRow();
-    let productNameCell = row.insertCell(0);
-    let priceCell = row.insertCell(1);
-    let quantityCell = row.insertCell(2); // Cellule pour la quantité
-    let totalCell = row.insertCell(3);
-    let actionsCell = row.insertCell(4);
-
-    productNameCell.innerText = item.name;
-    priceCell.innerText = `€${item.price.toFixed(2)}`;
-
-    // Boutons de quantité
-    let decreaseBtn = document.createElement("button");
-    decreaseBtn.innerText = "-";
-    decreaseBtn.classList = "decrease_btn";
-    decreaseBtn.addEventListener("click", () => {
-      if (item.quantity > 1) {
-        item.quantity -= 1;
-        total -= item.price;
-        updateCartModalContent();
-      }
+    iconMoins.addEventListener("click", function() {
+        const input = iconsDiv.querySelector("input");
+        if (parseInt(input.value) > 0) {
+            input.value = parseInt(input.value) - 1;
+            input.dataset.quantity = input.value;
+            menu.quantity = parseInt(input.value);
+            updateAside(menus); // Mettre à jour la barre latérale après modification de la quantité
+        }
     });
 
-    let increaseBtn = document.createElement("button");
-    increaseBtn.innerText = "+";
-    increaseBtn.classList = "add_btn";
-    increaseBtn.addEventListener("click", () => {
-      item.quantity += 1;
-      total += item.price;
-      updateCartModalContent();
+    const input = document.createElement("input");
+    input.type = "text";
+    input.value = "0";
+    input.maxLength = "2";
+    input.size = "1";
+    input.dataset.quantity = "0";
+    iconsDiv.appendChild(input);
+
+    const iconPlus = document.createElement("i");
+    iconPlus.classList.add("fa-solid", "fa-plus");
+    iconsDiv.appendChild(iconPlus);
+
+    iconPlus.addEventListener("click", function() {
+        input.value = parseInt(input.value) + 1; 
+        input.dataset.quantity = input.value; 
+        menu.quantity = parseInt(input.value); 
+        updateAside(menus); // Mettre à jour la barre latérale après modification de la quantité
     });
 
-    // Afficher la quantité dans la cellule de quantité
-    quantityCell.appendChild(decreaseBtn);
-    quantityCell.appendChild(document.createTextNode(` ${item.quantity} `));
-    quantityCell.appendChild(increaseBtn);
+    const contentDiv = document.createElement("div");
+    contentDiv.classList.add("price-content");
+    const h5 = document.createElement("h5");
+    h5.textContent = menu.price;
+    contentDiv.appendChild(h5);
+    parentDiv.appendChild(contentDiv);
 
-    let removeButton = document.createElement("button");
-    removeButton.innerText = "Remove";
-    removeButton.classList = "remove_btn";
+    const a = document.createElement("a");
+    a.classList.add("shoppingcart");
+    const img = document.createElement("img");
+    img.src = "https://uiparadox.co.uk/public/templates/royalfare/assets/media/icons/shopping-cart.png";
+    a.appendChild(img);
+    contentDiv.appendChild(a);
 
-    removeButton.addEventListener("click", () => {
-      total -= item.price * item.quantity;
-      cart.splice(index, 1);
-      updateCartModalContent();
+    a.addEventListener("click", function() {
+        // Récupérer la barre latérale et la faire apparaître
+        const aside = document.querySelector(".sidebar-menu");
+        if (aside) {
+            aside.style.right = "0px";
+        }
     });
 
-    // Ajouter les boutons d'action dans la colonne "Actions"
-    actionsCell.appendChild(removeButton);
-
-    totalCell.innerText = `€${(item.price * item.quantity).toFixed(2)}`;
-
-    // Ajouter le coût de l'élément actuel au total mis à jour
-    updatedTotal += item.price * item.quantity;
-  });
-
-  cartTotal.innerText = `€${updatedTotal.toFixed(2)}`; // Mettre à jour le total
-
-  // Mettez à jour le nombre total d'articles dans la span
-  let totalCount = cart.reduce((acc, item) => acc + item.quantity, 0);
-  total_count.innerText = totalCount;
+    return article;
 }
-// Clear cart
-function clearCart() {
-  cart = [];
-  total = 0;
-  updateCartModalContent();
-}
-
-let orderComplete = () => {
-  alert("Super! Ta commande est confirmée!");
-};
