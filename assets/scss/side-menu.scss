@@ -20,13 +20,10 @@
   right: -550px;
   top: 0;
   transition: right ease-in-out 0.5s;
-  width: 30%;
+  width: 33%;
   z-index: 99999;
-
-
-
-  
-
+  overflow-y: auto; /* Ajout du défilement vertical lorsque le contenu dépasse la hauteur de la barre latérale */
+  max-height: 100%;
 .text-shop {
 
     display: flex;
