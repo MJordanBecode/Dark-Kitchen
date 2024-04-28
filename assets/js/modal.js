@@ -82,7 +82,6 @@ export function createAside(menus) {
                     input.value = parseInt(input.value) - 1;
                     input.dataset.quantity = input.value;
                     menu.quantity = parseInt(input.value);
-                    updateAside(menus); // Mettre à jour la barre latérale après modification de la quantité
                     updateTotalPrice(); // Mettre à jour le prix total après modification de la quantité
                 }
             });
@@ -98,7 +97,6 @@ export function createAside(menus) {
                 input.value = parseInt(input.value) + 1;
                 input.dataset.quantity = input.value;
                 menu.quantity = parseInt(input.value);
-                updateAside(menus); // Mettre à jour la barre latérale après modification de la quantité
                 updateTotalPrice(); // Mettre à jour le prix total après modification de la quantité
             });
 

@@ -134,6 +134,7 @@ body main .div-container-menu .card-container .card .parent-div .quantite-conten
   background: #f0f0f0;
   display: flex;
   gap: 8px;
+  width: -moz-fit-content;
   width: fit-content;
   border-radius: 5px;
   padding: 0.833vw;
@@ -190,7 +191,7 @@ h5 {
   position: fixed;
   display: block;
   padding: 2%;
-  right: -550px;
+  right: -1000px;
   top: 0;
   transition: right ease-in-out 0.5s;
   width: 33%;
@@ -254,6 +255,7 @@ h5 {
   background: #f0f0f0;
   display: flex;
   gap: 8px;
+  width: -moz-fit-content;
   width: fit-content;
   border-radius: 5px;
   padding: 0.833vw;
@@ -285,6 +287,7 @@ h5 {
   overflow: hidden;
   text-overflow: ellipsis;
   transition: all 0.5s ease-in;
+  width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
 }
@@ -392,4 +395,4 @@ header .Div-menu {
 header .dark-mode {
   background-color: black;
   color: #333333;
-}
+}/*# sourceMappingURL=main.css.map */
