@@ -287,7 +287,19 @@ burgerCheckBox.addEventListener('change', function(event){
       filter_card("Burger")
     } 
     else{
+        filter_card()
         cardContainers.style.display = "flex";
+    }
+       
+});
+burgerCheckBox.addEventListener('change', function(event){
+    if(!event.target.checked){
+      filter_card("Burger")
+      cardContainers.style.display = "flex";
+    } 
+    else{
+       
+      
     }
        
 });
