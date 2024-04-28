@@ -79,4 +79,12 @@
   border-radius: 5px;
   padding: 0.833vw;
   height: 2.917vw;
+}
+.sidebar-menu .total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sidebar-menu .total h6 {
+  font-size: 1.3rem;
 }/*# sourceMappingURL=side-menu.css.map */

@@ -142,22 +142,25 @@ export function createAside(menus) {
     const divBorder = document.createElement("div");
     divBorder.classList.add("border-grey");
     aside.classList.add("sidebar-menu");
-    const divShop = document.createElement("div")
-    divShop.classList.add("text-shop")
+    const divShop = document.createElement("div");
+    divShop.classList.add("text-shop");
     const h2 = document.createElement("h2");
     h2.textContent = "Shop";
-    const iconClosure = document.createElement("i")
-    iconClosure.classList.add("fa-solid","fa-xmark")
-iconClosure.addEventListener("click", function(){
+    const iconClosure = document.createElement("i");
+    iconClosure.classList.add("fa-solid", "fa-xmark");
+    iconClosure.addEventListener("click", function() {
+        aside.style.right = "-100%";
+    });
+    const divTotal = document.createElement("div");
+    divTotal.classList.add("total");
+    const h6Total = document.createElement("h6");
+    h6Total.textContent = "total";
+    const h6Price = document.createElement("h6")
+    h6Price.textContent = calculateTotal(menus)+ " €"
 
-    aside.style.right = '-100%';
-
-    console.log("click")
-})
-
-    aside.appendChild(divShop)
-    divShop.appendChild(h2)
-    divShop.appendChild(iconClosure)
+    aside.appendChild(divShop);
+    divShop.appendChild(h2);
+    divShop.appendChild(iconClosure);
     aside.appendChild(divBorder);
 
     // Créez une liste pour les articles avec une quantité de 1
@@ -185,7 +188,7 @@ iconClosure.addEventListener("click", function(){
             iconMoins.classList.add("fa-solid", "fa-minus");
             const input = document.createElement("input");
             input.type = "text";
-            input.value = menu.quantity; 
+            input.value = menu.quantity;
             input.maxLength = "2";
             input.size = "1";
 
@@ -208,23 +211,26 @@ iconClosure.addEventListener("click", function(){
 
     aside.appendChild(ul);
     document.body.appendChild(aside);
+    aside.appendChild(divTotal);
+    divTotal.appendChild(h6Total);
+    divTotal.appendChild(h6Price);
 
     // Ajoutez un gestionnaire d'événements pour détecter quand le aside est ouvert
-    aside.addEventListener('transitionend', function() {
-        if (aside.style.right === '0px') {
+    aside.addEventListener("transitionend", function() {
+        if (aside.style.right === "0px") {
             // Le aside est ouvert, ajoutez le filtre noir
-            const modalFilter = document.createElement('div');
-            modalFilter.classList.add('modal-filter');
+            const modalFilter = document.createElement("div");
+            modalFilter.classList.add("modal-filter");
             document.body.appendChild(modalFilter);
 
             // Ajoutez un gestionnaire d'événements pour fermer le aside lorsque le filtre est cliqué
-            modalFilter.addEventListener('click', function() {
-                aside.style.right = '-100%';
+            modalFilter.addEventListener("click", function() {
+                aside.style.right = "-100%";
                 modalFilter.remove();
             });
         } else {
             // Le aside est fermé, retirez le filtre noir s'il existe
-            const modalFilter = document.querySelector('.modal-filter');
+            const modalFilter = document.querySelector(".modal-filter");
             if (modalFilter) {
                 modalFilter.remove();
             }
@@ -232,10 +238,13 @@ iconClosure.addEventListener("click", function(){
     });
 }
 
-
-
-
-
+function calculateTotal(menus) {
+    let total = 0;
+    menus.forEach(menu => {
+        total += parseFloat(menu.price) * menu.quantity;
+    });
+    return total.toFixed(2); // Retourne le total arrondi à 2 décimales
+}
 
 
 

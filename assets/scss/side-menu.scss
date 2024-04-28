@@ -11,6 +11,7 @@
 }
 
 
+
 .sidebar-menu {
   background: #fcfdfd;
   position: fixed;
@@ -22,6 +23,8 @@
   width: 30%;
   z-index: 99999;
 
+
+
   
 
 .text-shop {
@@ -30,6 +33,10 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 8%;
+
+
+
+
 
     h2 {
 
@@ -112,6 +119,16 @@
           }
         }
       }
+    }
+  }
+
+  .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h6 {
+        font-size: 1.3rem;
     }
   }
 }
