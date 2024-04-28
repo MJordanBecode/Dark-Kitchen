@@ -28,6 +28,19 @@ export function createAside(menus) {
     const h6Total = document.createElement("h6");
     h6Total.textContent = "TOTAL";
     const h6Price = document.createElement("h6");
+    const divButton = document.createElement("div")
+    divButton.classList.add("checkout-button")
+    const a = document.createElement("a")
+    a.addEventListener("click", function(){
+
+        alert("Votre Dark Kitchen commande a été prise !")
+    })
+
+    a.classList.add("outline-a")
+    const iconChicken = document.createElement("i")
+    iconChicken.classList.add("fa-solid", "fa-drumstick-bite" , "fa-bounce")
+    const h5 = document.createElement("h5")
+    h5.textContent = "Checkout"
 
     // Fonction pour mettre à jour le prix total dans la barre latérale
     function updateTotalPrice() {
@@ -108,6 +121,10 @@ export function createAside(menus) {
     aside.appendChild(divTotal);
     divTotal.appendChild(h6Total);
     divTotal.appendChild(h6Price);
+    aside.appendChild(divButton)
+    divButton.appendChild(a)
+    a.appendChild(h5)
+    a.appendChild(iconChicken)
 
     // Ajoutez un gestionnaire d'événements pour détecter quand le aside est ouvert
     aside.addEventListener("transitionend", function() {
