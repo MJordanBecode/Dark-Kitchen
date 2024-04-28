@@ -129,6 +129,7 @@ menus.forEach(menu => {
     divContainer.appendChild(card);
 });
 
+
 export function createAside(menus) {
     // Supprimez la barre latérale existante s'il y en a une
     const existingAside = document.querySelector(".sidebar-menu");
@@ -138,13 +139,26 @@ export function createAside(menus) {
 
     // Créez une nouvelle barre latérale
     const aside = document.createElement("aside");
-    const divBorder = document.createElement("div")
-    divBorder.classList.add("border-grey")
+    const divBorder = document.createElement("div");
+    divBorder.classList.add("border-grey");
     aside.classList.add("sidebar-menu");
+    const divShop = document.createElement("div")
+    divShop.classList.add("text-shop")
     const h2 = document.createElement("h2");
     h2.textContent = "Shop";
-    aside.appendChild(h2);
-    aside.appendChild(divBorder)
+    const iconClosure = document.createElement("i")
+    iconClosure.classList.add("fa-solid","fa-xmark")
+iconClosure.addEventListener("click", function(){
+
+    aside.style.right = '-100%';
+
+    console.log("click")
+})
+
+    aside.appendChild(divShop)
+    divShop.appendChild(h2)
+    divShop.appendChild(iconClosure)
+    aside.appendChild(divBorder);
 
     // Créez une liste pour les articles avec une quantité de 1
     const ul = document.createElement("ul");
@@ -154,47 +168,80 @@ export function createAside(menus) {
             const image = document.createElement("img");
             image.src = menu.image;
             image.alt = menu.nom;
-            const liBorder = document.createElement("li")
-            liBorder.classList.add("border-div-li")
-            const div = document.createElement("div")
-            const newDiv = document.createElement("div")
-            newDiv.classList.add("prix")
-            const h2 = document.createElement("h2")
-            div.classList.add("text-produit")
-            h2.textContent = menu.nom
-            const h5 = document.createElement("h5")
-            h5.textContent = menu.price
+            const liBorder = document.createElement("li");
+            liBorder.classList.add("border-div-li");
+            const div = document.createElement("div");
+            const newDiv = document.createElement("div");
+            newDiv.classList.add("prix");
+            const h2 = document.createElement("h2");
+            div.classList.add("text-produit");
+            h2.textContent = menu.nom;
+            const h5 = document.createElement("h5");
+            h5.textContent = menu.price;
 
             const iconsDiv = document.createElement("div");
             iconsDiv.classList.add("quantite-content");
             const iconMoins = document.createElement("i");
             iconMoins.classList.add("fa-solid", "fa-minus");
-            const input = document.createElement("input")
-            input.type = "text"
+            const input = document.createElement("input");
+            input.type = "text";
             input.value = menu.quantity; 
-            input.maxLength = "2"
-            input.size = "1"
+            input.maxLength = "2";
+            input.size = "1";
 
             const iconPlus = document.createElement("i");
             iconPlus.classList.add("fa-solid", "fa-plus");
 
             li.appendChild(image);
-            li.appendChild(div)
-            div.appendChild(h2)
-            div.appendChild(newDiv)
-            iconsDiv.appendChild(iconMoins)
-            iconsDiv.appendChild(input)
-            iconsDiv.appendChild(iconPlus)
-            newDiv.appendChild(iconsDiv)
-            newDiv.appendChild(h5)
+            li.appendChild(div);
+            div.appendChild(h2);
+            div.appendChild(newDiv);
+            iconsDiv.appendChild(iconMoins);
+            iconsDiv.appendChild(input);
+            iconsDiv.appendChild(iconPlus);
+            newDiv.appendChild(iconsDiv);
+            newDiv.appendChild(h5);
             ul.appendChild(li);
-            ul.appendChild(liBorder)
+            ul.appendChild(liBorder);
         }
     });
 
     aside.appendChild(ul);
     document.body.appendChild(aside);
+
+    // Ajoutez un gestionnaire d'événements pour détecter quand le aside est ouvert
+    aside.addEventListener('transitionend', function() {
+        if (aside.style.right === '0px') {
+            // Le aside est ouvert, ajoutez le filtre noir
+            const modalFilter = document.createElement('div');
+            modalFilter.classList.add('modal-filter');
+            document.body.appendChild(modalFilter);
+
+            // Ajoutez un gestionnaire d'événements pour fermer le aside lorsque le filtre est cliqué
+            modalFilter.addEventListener('click', function() {
+                aside.style.right = '-100%';
+                modalFilter.remove();
+            });
+        } else {
+            // Le aside est fermé, retirez le filtre noir s'il existe
+            const modalFilter = document.querySelector('.modal-filter');
+            if (modalFilter) {
+                modalFilter.remove();
+            }
+        }
+    });
 }
+
+
+
+
+
+
+
+
+
+
+
 
 // Fonction pour mettre à jour la barre latérale avec les nouvelles quantités
 function updateAside(menus) {
@@ -203,5 +250,6 @@ function updateAside(menus) {
         createAside(menus);
     }
 }
+
 
 const asideElement = createAside(menus);

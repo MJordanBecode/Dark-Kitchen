@@ -1,3 +1,13 @@
+.modal-filter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(40, 37, 37, 0.2);
+  z-index: 999;
+}
+
 .sidebar-menu {
   background: #fcfdfd;
   position: fixed;
@@ -9,7 +19,10 @@
   width: 30%;
   z-index: 99999;
 }
-.sidebar-menu h2 {
+.sidebar-menu .text-shop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 8%;
 }
 .sidebar-menu .border-grey {
