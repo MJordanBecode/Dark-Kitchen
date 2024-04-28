@@ -112,6 +112,7 @@
   transition: all 0.5s ease-in;
   width: -moz-fit-content;
   width: fit-content;
+  cursor: pointer;
 }
 .sidebar-menu .checkout-button a h5 {
   font-size: 0.7rem;

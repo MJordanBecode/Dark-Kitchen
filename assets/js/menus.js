@@ -8,7 +8,7 @@ export const menus = [
     },
     {
         nom: "Sundae",
-        image: "https://burgerking.be/_nuxt/image/82635a.webp",
+        image: "https://image.noelshack.com/fichiers/2024/17/7/1714332668-82635a.png",
         category: ["Plats", "Poulet", "Salade"],
         price: "4.50 €",
         description: "Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.",
