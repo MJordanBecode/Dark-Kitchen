@@ -2,7 +2,7 @@
 
 import { updateAside } from './modal.js';
 
-export function createCard(menu) {
+export function createCard(menu, menus) {
     const article = document.createElement("article");
     const div = document.createElement("div");
     article.classList.add("card-container");

@@ -135,10 +135,13 @@ export function createAside(menus) {
     updateTotalPrice();
 }
 
-
 export function updateAside(menus) {
     const asideElement = document.querySelector(".sidebar-menu");
     if (asideElement) {
+        // Supprimez la barre latérale existante
+        asideElement.remove();
+        
+        // Recréez la barre latérale avec les menus mis à jour
         createAside(menus);
     }
 }
