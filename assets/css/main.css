@@ -42,11 +42,11 @@ button .fa-moon {
 }
 
 footer {
-  background-image: url(https://cdn.discordapp.com/attachments/1225466626007236720/1234260274782146732/fast-food-fastfoodcity.png?ex=663015f4&is=662ec474&hm=37691aafce508ecfc40e6c8e2ad1e48a50249de6d7f54d9f35899df3e81e1097&);
+  background-image: url(/assets/images/fast-food-fastfoodcity.png);
   background-position: center;
   color: var(--text-color);
   text-align: center;
-  font-family: Flamenco;
+  font-family: "Flamenco";
   padding: 40px 0;
 }
 footer .footer-container {
@@ -135,7 +135,6 @@ body main .div-container-menu .card-container .card .parent-div .quantite-conten
   background: #f0f0f0;
   display: flex;
   gap: 8px;
-  width: -moz-fit-content;
   width: fit-content;
   border-radius: 5px;
   padding: 0.833vw;
@@ -256,7 +255,6 @@ h5 {
   background: #f0f0f0;
   display: flex;
   gap: 8px;
-  width: -moz-fit-content;
   width: fit-content;
   border-radius: 5px;
   padding: 0.833vw;
@@ -288,7 +286,6 @@ h5 {
   overflow: hidden;
   text-overflow: ellipsis;
   transition: all 0.5s ease-in;
-  width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
 }
@@ -354,7 +351,7 @@ h5 {
   }
 }
 header {
-  background-image: url(https://cdn.discordapp.com/attachments/1225466626007236720/1234260274782146732/fast-food-fastfoodcity.png?ex=663015f4&is=662ec474&hm=37691aafce508ecfc40e6c8e2ad1e48a50249de6d7f54d9f35899df3e81e1097&);
+  background-image: url(/assets/images/fast-food-fastfoodcity.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -399,4 +396,4 @@ header .Div-menu {
 header .dark-mode {
   background-color: black;
   color: #333333;
-}/*# sourceMappingURL=main.css.map */
+}
