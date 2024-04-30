@@ -94,6 +94,10 @@ footer i {
   list-style-type: none;
 }
 
+body main {
+  display: flex;
+  width: 100%;
+}
 body main .div-container-menu {
   padding: 5%;
   display: flex;
@@ -396,4 +400,28 @@ header .Div-menu {
 header .dark-mode {
   background-color: black;
   color: #333333;
+}
+
+/*aside*/
+aside {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(22, 22, 22);
+  width: 25%;
+  border-radius: 45px;
+  height: auto;
+}
+aside form input {
+  margin: 4px 0 0;
+  line-height: normal;
+  width: 20px;
+  height: 20px;
+}
+aside form .legend_filter {
+  text-align: center;
+}
+aside form h2 {
+  color: white;
+  margin-bottom: 10px;
+  text-align: center;
 }

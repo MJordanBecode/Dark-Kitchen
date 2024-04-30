@@ -6,7 +6,7 @@ import { createAside } from "./modal.js";
 // Création des cartes pour chaque menu
 menus.forEach(menu => {
     const card = createCard(menu, menus);
-    const parentElement = document.querySelector(".div-container-menu"); // Assurez-vous de sélectionner l'élément parent correctement
+    const parentElement = document.querySelector(".div-container-menu"); 
     parentElement.appendChild(card);
 });
 
