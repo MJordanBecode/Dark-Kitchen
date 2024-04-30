@@ -42,7 +42,8 @@ button .fa-moon {
 }
 
 footer {
-  background-color: #DAA520;
+  background-image: url(https://cdn.discordapp.com/attachments/1225466626007236720/1234260274782146732/fast-food-fastfoodcity.png?ex=663015f4&is=662ec474&hm=37691aafce508ecfc40e6c8e2ad1e48a50249de6d7f54d9f35899df3e81e1097&);
+  background-position: center;
   color: var(--text-color);
   text-align: center;
   font-family: Flamenco;
@@ -350,7 +351,9 @@ h5 {
   }
 }
 header {
-  background-color: #DAA520;
+  background-image: url(https://cdn.discordapp.com/attachments/1225466626007236720/1234260274782146732/fast-food-fastfoodcity.png?ex=663015f4&is=662ec474&hm=37691aafce508ecfc40e6c8e2ad1e48a50249de6d7f54d9f35899df3e81e1097&);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 header nav {
   display: flex;
@@ -358,6 +361,7 @@ header nav {
   justify-content: center;
   justify-items: center;
   align-content: center;
+  height: 50vh;
 }
 header nav a {
   display: flex;
