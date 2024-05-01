@@ -124,6 +124,9 @@ body main .div-container-menu .card-container .card img {
 body main .div-container-menu .card-container .card p {
   color: gray;
   padding: 4%;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-bottom: 15%;
 }
 body main .div-container-menu .card-container .card .parent-div {
   display: flex;
@@ -196,7 +199,7 @@ h5 {
   transition: right ease-in-out 0.5s;
   width: 33%;
   z-index: 99999;
-  overflow-y: auto; /* Ajout du défilement vertical lorsque le contenu dépasse la hauteur de la barre latérale */
+  overflow-y: auto;
   max-height: 100%;
 }
 .sidebar-menu .text-shop {
@@ -206,7 +209,7 @@ h5 {
   margin-bottom: 8%;
 }
 .sidebar-menu .border-grey {
-  background: #F0F0F0;
+  background: #f0f0f0;
   width: 100%;
   height: 1px;
   margin-bottom: 8%;
@@ -218,7 +221,7 @@ h5 {
   z-index: 0;
 }
 .sidebar-menu ul .border-div-li {
-  background: #F0F0F0;
+  background: #f0f0f0;
   width: 100%;
   height: 1px;
   margin-bottom: 8%;
@@ -299,8 +302,8 @@ h5 {
 }
 .sidebar-menu .checkout-button .outline-a {
   background: transparent;
-  color: #FF5C00;
-  border: 1px solid #FF5C00;
+  color: #ff5c00;
+  border: 1px solid #ff5c00;
   box-shadow: none;
   transition: all 0.5s ease-in;
 }

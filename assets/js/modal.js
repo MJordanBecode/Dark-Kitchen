@@ -2,6 +2,10 @@
 
 import { calculateTotal } from './calcule.js';
 
+
+
+
+
 export function createAside(menus) {
     // Supprimez la barre latérale existante s'il y en a une
     const existingAside = document.querySelector(".sidebar-menu");
@@ -85,6 +89,10 @@ export function createAside(menus) {
                     updateTotalPrice(); // Mettre à jour le prix total après modification de la quantité
                 }
             });
+
+
+
+            
             const input = document.createElement("input");
             input.type = "text";
             input.value = menu.quantity;
@@ -149,6 +157,10 @@ export function createAside(menus) {
     // Mettre à jour le prix total initial
     updateTotalPrice();
 }
+
+
+
+
 
 export function updateAside(menus) {
     const asideElement = document.querySelector(".sidebar-menu");
