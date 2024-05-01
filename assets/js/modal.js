@@ -3,7 +3,6 @@
 import { calculateTotal } from './calcule.js';
 
 export function createAside(menus) {
-    // Supprimez la barre latérale existante s'il y en a une
     const existingAside = document.querySelector(".sidebar-menu");
     if (existingAside) {
         existingAside.remove();
@@ -82,7 +81,7 @@ export function createAside(menus) {
                     input.value = parseInt(input.value) - 1;
                     input.dataset.quantity = input.value;
                     menu.quantity = parseInt(input.value);
-                    updateTotalPrice(); // Mettre à jour le prix total après modification de la quantité
+                    updateTotalPrice(); 
                 }
             });
             const input = document.createElement("input");
@@ -97,7 +96,7 @@ export function createAside(menus) {
                 input.value = parseInt(input.value) + 1;
                 input.dataset.quantity = input.value;
                 menu.quantity = parseInt(input.value);
-                updateTotalPrice(); // Mettre à jour le prix total après modification de la quantité
+                updateTotalPrice(); 
             });
 
             li.appendChild(image);
@@ -146,17 +145,17 @@ export function createAside(menus) {
         }
     });
 
-    // Mettre à jour le prix total initial
+   
     updateTotalPrice();
 }
 
 export function updateAside(menus) {
     const asideElement = document.querySelector(".sidebar-menu");
     if (asideElement) {
-        // Supprimez la barre latérale existante
+       
         asideElement.remove();
         
-        // Recréez la barre latérale avec les menus mis à jour
+       
         createAside(menus);
     }
 }

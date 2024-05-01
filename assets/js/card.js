@@ -9,6 +9,7 @@ export function createCard(menu, menus) {
     const div = document.createElement("div");
     article.classList.add("card-container");
     div.classList.add("card");
+    div.setAttribute("id", menu.category); 
     article.appendChild(div);
 
     const image = document.createElement("img");
@@ -41,7 +42,7 @@ export function createCard(menu, menus) {
             input.value = parseInt(input.value) - 1;
             input.dataset.quantity = input.value;
             menu.quantity = parseInt(input.value);
-            updateAside(menus); // Mettre à jour la barre latérale après modification de la quantité
+            updateAside(menus); 
         }
     });
 
@@ -61,7 +62,7 @@ export function createCard(menu, menus) {
         input.value = parseInt(input.value) + 1; 
         input.dataset.quantity = input.value; 
         menu.quantity = parseInt(input.value); 
-        updateAside(menus); // Mettre à jour la barre latérale après modification de la quantité
+        updateAside(menus); 
     });
 
     const contentDiv = document.createElement("div");
@@ -88,6 +89,10 @@ export function createCard(menu, menus) {
 
     return article;
 }
+
+
+
+
 
 
 // filer 
@@ -185,9 +190,7 @@ label_dessert.innerText = 'dessert'; // Text next to the checkbox
 
 
 function filter_card(category) {
-    menus();
     const cardContainers = document.querySelectorAll(".card-container");
-    console.log(cardContainers)
 
 
 
@@ -195,10 +198,10 @@ function filter_card(category) {
 
         const cardElement = cardContainers.querySelector(".card");
         const kaka = cardElement.getAttribute("id")
-        console.log(cardElement)
-        console.log(kaka)
 
-        if(category.includes(kaka)){
+
+        if(kaka === category){
+            cardContainers.style.display = "block"
             
         }else{
             cardContainers.style.display = "none";
@@ -208,6 +211,12 @@ function filter_card(category) {
 }
 
 
+function afficherToutesLesCartes() {
+    const cardContainers = document.querySelectorAll(".card-container");
+    cardContainers.forEach(cardContainer => {
+        cardContainer.style.display = "block";
+    });
+}
 
 
 //creation event of checkbox 
@@ -223,5 +232,6 @@ burgerCheckBox.addEventListener('change', function(event){
          console.log("bonjour l'homme le plus beau de la terre");
     } else{
         //traitement 
+        afficherToutesLesCartes();
     }
 });

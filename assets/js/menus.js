@@ -72,5 +72,5 @@ export const menus = [
 ];
 
 menus.forEach(menu => {
-    menu.quantity = 0; // Initialiser la quantité à zéro
+    menu.quantity = 0; 
 });

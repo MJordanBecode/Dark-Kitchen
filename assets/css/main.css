@@ -139,6 +139,7 @@ body main .div-container-menu .card-container .card .parent-div .quantite-conten
   background: #f0f0f0;
   display: flex;
   gap: 8px;
+  width: -moz-fit-content;
   width: fit-content;
   border-radius: 5px;
   padding: 0.833vw;
@@ -259,6 +260,7 @@ h5 {
   background: #f0f0f0;
   display: flex;
   gap: 8px;
+  width: -moz-fit-content;
   width: fit-content;
   border-radius: 5px;
   padding: 0.833vw;
@@ -290,6 +292,7 @@ h5 {
   overflow: hidden;
   text-overflow: ellipsis;
   transition: all 0.5s ease-in;
+  width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
 }
@@ -424,4 +427,4 @@ aside form h2 {
   color: white;
   margin-bottom: 10px;
   text-align: center;
-}
+}/*# sourceMappingURL=main.css.map */
