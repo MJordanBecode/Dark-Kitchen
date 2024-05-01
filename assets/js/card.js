@@ -197,10 +197,10 @@ function filter_card(category) {
     cardContainers.forEach(function(cardContainers) {
 
         const cardElement = cardContainers.querySelector(".card");
-        const kaka = cardElement.getAttribute("id")
+        const idFilter = cardElement.getAttribute("id")
 
 
-        if(kaka === category){
+        if(idFilter === category){
             cardContainers.style.display = "block"
             
         }else{
@@ -222,14 +222,62 @@ function afficherToutesLesCartes() {
 //creation event of checkbox 
 
 let burgerCheckBox = document.getElementById("burger");
+let saladeCheckBox = document.getElementById("salade");
+let tacosCheckBox = document.getElementById("tacos");
+let softCheckBox = document.getElementById("soft");
+let dessertCheckBox = document.getElementById("dessert");
 
 //add event 
 burgerCheckBox.addEventListener('change', function(event){
     if(event.target.checked){
-      //  let kaka = document.querySelector("body > main > div > article:nth-child(1)")
-      //  kaka.style.visibility = 'hidden';
-      filter_card("Burger")
-         console.log("bonjour l'homme le plus beau de la terre");
+
+      filter_card("Burger");
+         
+    } else{
+        //traitement 
+        afficherToutesLesCartes();
+    }
+});
+
+saladeCheckBox.addEventListener('change', function(event){
+    if(event.target.checked){
+
+      filter_card("Salade");
+
+    } else{
+        //traitement 
+        afficherToutesLesCartes();
+    }
+});
+
+tacosCheckBox.addEventListener('change', function(event){
+    if(event.target.checked){
+
+      filter_card("Tacos");
+
+    } else{
+        //traitement 
+        afficherToutesLesCartes();
+    }
+});
+
+softCheckBox.addEventListener('change', function(event){
+    if(event.target.checked){
+
+      filter_card("Soft");
+
+    } else{
+        //traitement 
+        afficherToutesLesCartes();
+    }
+});
+
+
+dessertCheckBox.addEventListener('change', function(event){
+    if(event.target.checked){
+
+      filter_card("Dessert");
+
     } else{
         //traitement 
         afficherToutesLesCartes();
