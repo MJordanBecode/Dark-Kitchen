@@ -1,0 +1,124 @@
+
+:root {
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode {
+  --card-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  list-style-type: none;
+}
+
+body {
+
+
+  main {
+    display: flex;
+    width: 100%;
+    .div-container-menu {
+      padding: 5%;
+      display: flex;
+      flex-wrap: wrap;
+      .card-container {
+        justify-content: center;
+        width: 30%;
+        height: auto;
+        border-radius: 30px;
+        background-color: #f5f6f7;
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.04),
+          6px 3px 14px 0px rgba(0, 0, 0, 0.04),
+          23px 12px 26px 0px rgba(0, 0, 0, 0.03),
+          53px 27px 35px 0px rgba(0, 0, 0, 0.02),
+          94px 48px 42px 0px rgba(0, 0, 0, 0.01);
+        margin-right: 3%;
+        margin-top: 8%;
+        border: 1px solid #f0f0f0;
+        padding: 1.667vw 1.25vw;
+        .card {
+          text-align: center;
+
+          &:hover {
+            img {
+              transform: scale(1.1);
+              transition: ease 1.2s;
+            }
+          }
+          img {
+            width: 100%;
+            padding: 10%;
+          }
+
+          p {
+            color: gray;
+            padding: 4%;
+          }
+
+          .parent-div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .quantite-content {
+              background: #f0f0f0;
+              display: flex;
+              gap: 8px;
+              width: fit-content;
+              border-radius: 5px;
+              padding: 0.833vw;
+              height: 2.917vw;
+
+              input {
+                border: none;
+                padding: 0;
+                background: transparent;
+                text-align: center;
+              }
+
+              i {
+                font-size: 1rem;
+              }
+            }
+
+            .price-content {
+              display: flex;
+              align-items: center;
+              gap: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+h5 {
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 481px) {
+  main {
+    justify-content: flex-start;
+    width: 70%;
+    margin: 0;
+
+    .div-container-menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      flex: 1 0 50%;
+      box-sizing: border-box;
+      margin: 10px;
+    }
+  }
+}
+
+
