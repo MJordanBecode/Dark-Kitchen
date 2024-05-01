@@ -51,7 +51,7 @@ export function createAside(menus) {
     divShop.appendChild(iconClosure);
     aside.appendChild(divBorder);
 
-    // Créez une liste pour les articles avec une quantité de 1
+    // Créez une liste pour les articles avec une quantité
     const ul = document.createElement("ul");
     menus.forEach(menu => {
         if (menu.quantity >= 1) {
@@ -137,7 +137,6 @@ export function createAside(menus) {
                 modalFilter.remove();
             });
         } else {
-            // Le aside est fermé, retirez le filtre noir s'il existe
             const modalFilter = document.querySelector(".modal-filter");
             if (modalFilter) {
                 modalFilter.remove();
