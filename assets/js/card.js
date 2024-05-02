@@ -157,7 +157,7 @@ const mainElement = document.querySelector('main');
 mainElement.appendChild(asideElement); // add asideElement in the body
 
 //################# add text in differents elements ###########################
-h2_filter.innerHTML = 'Filter';
+h2_filter.innerHTML = 'Choose a Category';
 legend_filter.innerHTML = 'Availability';
 legend_filter.classList.add('legend_filter');
 

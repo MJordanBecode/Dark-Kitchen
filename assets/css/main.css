@@ -139,7 +139,6 @@ body main .div-container-menu .card-container .card .parent-div .quantite-conten
   background: #f0f0f0;
   display: flex;
   gap: 8px;
-  width: -moz-fit-content;
   width: fit-content;
   border-radius: 5px;
   padding: 0.833vw;
@@ -260,7 +259,6 @@ h5 {
   background: #f0f0f0;
   display: flex;
   gap: 8px;
-  width: -moz-fit-content;
   width: fit-content;
   border-radius: 5px;
   padding: 0.833vw;
@@ -292,7 +290,6 @@ h5 {
   overflow: hidden;
   text-overflow: ellipsis;
   transition: all 0.5s ease-in;
-  width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
 }
@@ -409,22 +406,35 @@ header .dark-mode {
 aside {
   display: flex;
   flex-direction: column;
-  background-color: rgb(22, 22, 22);
+  background-color: rgb(30, 13, 13);
   width: 25%;
   border-radius: 45px;
   height: auto;
+  justify-items: center;
+}
+aside h2 {
+  margin-left: 3%;
+  font-size: 35px;
+  color: white;
+  margin-bottom: 10px;
+  text-align: center;
+}
+aside form legend {
+  font-size: 33px;
+  margin-bottom: 3%;
+  margin-top: 2%;
+}
+aside form div label {
+  font-size: 33px;
+  margin-left: 7%;
 }
 aside form input {
   margin: 4px 0 0;
   line-height: normal;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 21px;
+  margin-left: 24%;
 }
 aside form .legend_filter {
   text-align: center;
 }
-aside form h2 {
-  color: white;
-  margin-bottom: 10px;
-  text-align: center;
-}/*# sourceMappingURL=main.css.map */
