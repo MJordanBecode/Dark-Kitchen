@@ -7,7 +7,6 @@ import { calculateTotal } from './calcule.js';
 
 
 export function createAside(menus) {
-    // Supprimez la barre latérale existante s'il y en a une
     const existingAside = document.querySelector(".sidebar-menu");
     if (existingAside) {
         existingAside.remove();
@@ -56,7 +55,7 @@ export function createAside(menus) {
     divShop.appendChild(iconClosure);
     aside.appendChild(divBorder);
 
-    // Créez une liste pour les articles avec une quantité de 1
+    // Créez une liste pour les articles avec une quantité
     const ul = document.createElement("ul");
     menus.forEach(menu => {
         if (menu.quantity >= 1) {
@@ -86,7 +85,7 @@ export function createAside(menus) {
                     input.value = parseInt(input.value) - 1;
                     input.dataset.quantity = input.value;
                     menu.quantity = parseInt(input.value);
-                    updateTotalPrice(); // Mettre à jour le prix total après modification de la quantité
+                    updateTotalPrice(); 
                 }
             });
 
@@ -105,7 +104,7 @@ export function createAside(menus) {
                 input.value = parseInt(input.value) + 1;
                 input.dataset.quantity = input.value;
                 menu.quantity = parseInt(input.value);
-                updateTotalPrice(); // Mettre à jour le prix total après modification de la quantité
+                updateTotalPrice(); 
             });
 
             li.appendChild(image);
@@ -146,7 +145,6 @@ export function createAside(menus) {
                 modalFilter.remove();
             });
         } else {
-            // Le aside est fermé, retirez le filtre noir s'il existe
             const modalFilter = document.querySelector(".modal-filter");
             if (modalFilter) {
                 modalFilter.remove();
@@ -154,7 +152,7 @@ export function createAside(menus) {
         }
     });
 
-    // Mettre à jour le prix total initial
+   
     updateTotalPrice();
 }
 
@@ -165,10 +163,10 @@ export function createAside(menus) {
 export function updateAside(menus) {
     const asideElement = document.querySelector(".sidebar-menu");
     if (asideElement) {
-        // Supprimez la barre latérale existante
+       
         asideElement.remove();
         
-        // Recréez la barre latérale avec les menus mis à jour
+       
         createAside(menus);
     }
 }

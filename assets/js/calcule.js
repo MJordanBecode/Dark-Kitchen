@@ -3,5 +3,5 @@ export function calculateTotal(menus) {
     menus.forEach(menu => {
         total += parseFloat(menu.price) * menu.quantity;
     });
-    return total.toFixed(2); // Retourne le total arrondi à 2 décimales
+    return total.toFixed(2);
 }

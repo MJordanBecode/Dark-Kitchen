@@ -75,14 +75,18 @@
 
 // -----------------------écran pc------------------------------------
 header {
-    background-color: #DAA520;
+    background-image: url(https://image.noelshack.com/fichiers/2024/18/4/1714605091-fast-food-fastfoodcity.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
     nav {
         display: flex;
         flex-direction: column; /* Disposer les éléments horizontalement */
         justify-content: center;
         justify-items: center;
         align-content: center;
-        
+        height: 50vh;
+
         
     }
     nav a {
@@ -95,6 +99,8 @@ header {
         font-family: "Flamenco", system-ui;
         font-size: 40px;
         font-weight: 800;
+
+
 
         
     }

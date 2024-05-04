@@ -1,64 +1,28 @@
-# Dark-Kitchen
-
-----------------------------------ancien code stacy----------------------------
-// debut de a verifier
-// const logoImg = document.createElement("img");
-// const containerDiv = document.createElement("div");
-// const button1=document.createElement("button1");
-// const link1=document.createElement("a");
-// const button2=document.createElement("button2");
-// const link2=document.createElement("a");
-// const button3=document.createElement("button3");
-// const link3=document.createElement("a");
-// const searchInput = document.createElement("input");
+# 🍗 Dark-Kitchen 
 
 
-// logo.className = "logo";
+Dark kitchens are also known as virtual kitchens, cloud kitchens, ghost kitchens or delivery-only restaurants. However you call it, a dark kitchen always revolves around the same concept: selling meals exclusively through delivery. Ghost kitchens have no sitting capacity for in-house diners or walk-ins, as they focus only on delivery, preparing food once an order comes in through a delivery app or an online ordering system.
+## Authors
+
+- [@Stacy](https://github.com/Druart-Stacy) : Header creator ⚒️
+- [@Maryam](https://github.com/MaryamAkraiche) : footer creator ⚒️
+- [@Tom](https://github.com/Xeless) : Body creator ⚒️
+- [@Dorian](https://github.com/doblaria12) : Body creator ⚒️
+- [@Jordan](https://github.com/MJordanBecode) : Filter creator and the PM ⚒️ 🛡️
 
 
-// logoImg.src = "assets/logo2.png";
-// logoImg.alt = "Logo"; 
+## Features
+
+- Light/dark mode toggle🔦
+- Responsive mode📱
+- Filter mode 🗑️
+- Shopping-Card 🛍️
 
 
-// containerDiv.className = "container";
-// link1.href = "#";
-// link1.textContent = "Nos menu";
+## GitHub Page 📄
 
-// link2.href="#";
-// link2.textContent="Qualité";
+-  https://mjordanbecode.github.io/Dark-Kitchen/ 
 
-// link3.href="#";
-// link3.textContent="Nous contacter";
+## advancement 
 
-
-
-// searchInput.type = "text";
-// searchInput.name = "search";
-// searchInput.placeholder = "Search";
-
-
-// searchInput.addEventListener("keyup", search);
-
-
-
-// // Obtenir le body du document
-// const body = document.getElementsByTagName("body")[0];
-
-// // Insérer le header au début du body
-// body.insertBefore(header, body.firstChild);
-
-// logo.appendChild(logoImg);
-// button1.appendChild(link1);
-// button2.appendChild(link2);
-// button3.appendChild(link3);
-// containerDiv.appendChild(button1);
-// containerDiv.appendChild(button2);
-// containerDiv.appendChild(button3);
-// nav.appendChild(containerDiv);
-// nav.appendChild(logo);
-// nav.appendChild(containerDiv);
-// nav.appendChild(searchInput);
-
-// fin de a verifier
-
--------------------------------------fin code Stacy----------------------------
+this project isn't finish :)

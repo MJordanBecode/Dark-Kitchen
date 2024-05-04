@@ -16,6 +16,7 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     // position: relative;
+    
 }
 
 a {
@@ -43,10 +44,11 @@ button {
 
 
 footer {
-    background-color:  #DAA520;
+    background-image: url(https://image.noelshack.com/fichiers/2024/18/4/1714605091-fast-food-fastfoodcity.jpg);
+    background-position: center;
     color: var(--text-color);
     text-align: center;
-    font-family: Flamenco;
+    font-family: 'Flamenco';
     padding: 40px 0;
     .footer-container {
         display: flex;

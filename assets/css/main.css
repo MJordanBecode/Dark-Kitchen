@@ -42,10 +42,11 @@ button .fa-moon {
 }
 
 footer {
-  background-color: #DAA520;
+  background-image: url(https://image.noelshack.com/fichiers/2024/18/4/1714605091-fast-food-fastfoodcity.jpg);
+  background-position: center;
   color: var(--text-color);
   text-align: center;
-  font-family: Flamenco;
+  font-family: "Flamenco";
   padding: 40px 0;
 }
 footer .footer-container {
@@ -93,6 +94,10 @@ footer i {
   list-style-type: none;
 }
 
+body main {
+  display: flex;
+  width: auto;
+}
 body main .div-container-menu {
   padding: 5%;
   display: flex;
@@ -105,10 +110,10 @@ body main .div-container-menu .card-container {
   border-radius: 30px;
   background-color: #f5f6f7;
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.04), 6px 3px 14px 0px rgba(0, 0, 0, 0.04), 23px 12px 26px 0px rgba(0, 0, 0, 0.03), 53px 27px 35px 0px rgba(0, 0, 0, 0.02), 94px 48px 42px 0px rgba(0, 0, 0, 0.01);
-  margin-right: 3%;
   margin-top: 8%;
   border: 1px solid #f0f0f0;
   padding: 1.667vw 1.25vw;
+  margin-right: 3%;
 }
 body main .div-container-menu .card-container .card {
   text-align: center;
@@ -173,7 +178,6 @@ h5 {
   main .div-container-menu {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     flex: 1 0 50%;
     box-sizing: border-box;
     margin: 10px;
@@ -356,7 +360,9 @@ h5 {
   }
 }
 header {
-  background-color: #DAA520;
+  background-image: url(https://image.noelshack.com/fichiers/2024/18/4/1714605091-fast-food-fastfoodcity.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 header nav {
   display: flex;
@@ -364,6 +370,7 @@ header nav {
   justify-content: center;
   justify-items: center;
   align-content: center;
+  height: 50vh;
 }
 header nav a {
   display: flex;
@@ -398,4 +405,28 @@ header .Div-menu {
 header .dark-mode {
   background-color: black;
   color: #333333;
+}
+
+/*aside*/
+aside {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  border-radius: 45px;
+  height: auto;
+  text-align: center;
+}
+aside form input {
+  margin: 4px 0 0;
+  line-height: normal;
+  width: 20px;
+  height: 20px;
+}
+aside form .legend_filter {
+  text-align: center;
+}
+aside form h2 {
+  color: white;
+  margin-bottom: 10px;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */
