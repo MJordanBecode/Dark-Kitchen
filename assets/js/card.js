@@ -110,9 +110,7 @@ const div_salade = document.createElement('div'); // div gonna contain all eleme
 const input_salade_filter = document.createElement('input');
 const label_salade = document.createElement('label');
 
-const div_tacos = document.createElement('div'); // div gonna contain all element of burger
-const input_tacos_filter = document.createElement('input'); 
-const label_tacos = document.createElement('label');
+
 
 const div_soft = document.createElement('div'); // div gonna contain all element of burger
 const input_soft_filter = document.createElement('input');
@@ -138,10 +136,6 @@ div_salade.appendChild(input_salade_filter);
 div_salade.appendChild(label_salade);
 
 
-//Tacos 
-form_filter.appendChild(div_tacos);
-div_tacos.appendChild(input_tacos_filter);
-div_tacos.appendChild(label_tacos);
 
 //Boisson 
 form_filter.appendChild(div_soft);
@@ -158,7 +152,6 @@ mainElement.appendChild(asideElement); // add asideElement in the body
 
 //################# add text in differents elements ###########################
 h2_filter.innerHTML = 'Filter';
-legend_filter.innerHTML = 'Availability';
 legend_filter.classList.add('legend_filter');
 
 
@@ -172,10 +165,6 @@ input_salade_filter.setAttribute("type", "checkbox"); input_salade_filter.setAtt
 label_salade.setAttribute("for", "salade");
 label_salade.innerText = 'Salade'; // Text next to the checkbox
 
-//tacos
-input_tacos_filter.setAttribute("type", "checkbox"); input_tacos_filter.setAttribute("id", "tacos"); input_tacos_filter.setAttribute("name", "tacos"); //add checkBox + id + name
-label_tacos.setAttribute("for", "tacos");
-label_tacos.innerText = 'tacos'; // Text next to the checkbox
 
 //soft
 input_soft_filter.setAttribute("type", "checkbox"); input_soft_filter.setAttribute("id", "soft"); input_soft_filter.setAttribute("name", "soft"); //add checkBox + id + name
@@ -223,7 +212,6 @@ function afficherToutesLesCartes() {
 
 let burgerCheckBox = document.getElementById("burger");
 let saladeCheckBox = document.getElementById("salade");
-let tacosCheckBox = document.getElementById("tacos");
 let softCheckBox = document.getElementById("soft");
 let dessertCheckBox = document.getElementById("dessert");
 
@@ -250,16 +238,7 @@ saladeCheckBox.addEventListener('change', function(event){
     }
 });
 
-tacosCheckBox.addEventListener('change', function(event){
-    if(event.target.checked){
 
-      filter_card("Tacos");
-
-    } else{
-        //traitement 
-        afficherToutesLesCartes();
-    }
-});
 
 softCheckBox.addEventListener('change', function(event){
     if(event.target.checked){

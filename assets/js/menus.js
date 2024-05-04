@@ -69,7 +69,25 @@ export const menus = [
         price: "2.30 €",
         description: "Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.",
     },
+    {
+        nom: "Dark Fusion",
+        image: "https://www.burgerking.be/_nuxt/image/bf1df6.webp",
+        category: ["Dessert"],
+        price: "2.30 €",
+        description: "Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.",
+    },
+    {
+        nom: "Donuts",
+        image: "https://image.noelshack.com/fichiers/2024/18/4/1714652932-f65563.png",
+        category: ["Dessert"],
+        price: "2.30 €",
+        description: "Lorem ipsum dolor sit amet consectetur. Ut in vulputate ac odio.",
+    },
 ];
+
+
+
+
 
 menus.forEach(menu => {
     menu.quantity = 0; 

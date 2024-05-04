@@ -96,7 +96,7 @@ footer i {
 
 body main {
   display: flex;
-  width: 100%;
+  width: auto;
 }
 body main .div-container-menu {
   padding: 5%;
@@ -110,10 +110,10 @@ body main .div-container-menu .card-container {
   border-radius: 30px;
   background-color: #f5f6f7;
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.04), 6px 3px 14px 0px rgba(0, 0, 0, 0.04), 23px 12px 26px 0px rgba(0, 0, 0, 0.03), 53px 27px 35px 0px rgba(0, 0, 0, 0.02), 94px 48px 42px 0px rgba(0, 0, 0, 0.01);
-  margin-right: 3%;
   margin-top: 8%;
   border: 1px solid #f0f0f0;
   padding: 1.667vw 1.25vw;
+  margin-right: 3%;
 }
 body main .div-container-menu .card-container .card {
   text-align: center;
@@ -175,7 +175,6 @@ h5 {
   main .div-container-menu {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     flex: 1 0 50%;
     box-sizing: border-box;
     margin: 10px;
@@ -409,10 +408,10 @@ header .dark-mode {
 aside {
   display: flex;
   flex-direction: column;
-  background-color: rgb(22, 22, 22);
   width: 25%;
   border-radius: 45px;
   height: auto;
+  text-align: center;
 }
 aside form input {
   margin: 4px 0 0;
