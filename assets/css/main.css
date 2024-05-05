@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Flamenco:wght@300;400&display=swap");
 :root {
@@ -37,39 +38,30 @@ button .fa-moon {
 }
 
 footer {
-  background-image: url(https://image.noelshack.com/fichiers/2024/18/4/1714605091-fast-food-fastfoodcity.jpg);
-  background-position: center;
-  color: var(--text-color);
+  background-color: rgb(194, 103, 104);
   text-align: center;
-  font-family: "Flamenco";
-  padding: 40px 0;
+  padding: 4%;
+  font-family: "Roboto", sans-serif;
 }
 footer .footer-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 footer h2 {
   letter-spacing: 2px;
-  font-size: 40px;
-}
-footer h3 {
-  margin: 20px 0;
+  font-size: 2.5rem;
+  margin-bottom: 2%;
+  color: white;
 }
 footer i {
-  color: var(--link-color);
   font-size: 25px;
-  margin: 0 10px;
+  letter-spacing: 1rem;
 }
 
 @media screen and (min-width: 481px) {
-  footer h2 {
-    letter-spacing: 2px;
-    font-size: 50px;
-  }
   footer i {
-    color: var(--link-color);
+    color: #b57e51;
     font-size: 30px;
-    margin: 0 20px;
   }
 }
 :root {
@@ -333,6 +325,8 @@ header {
   width: 100%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 18px;
+  background-color: #ebe3dd;
+  z-index: 5;
 }
 header nav {
   display: flex;
@@ -349,7 +343,7 @@ header .logo {
 header .Div-logo {
   display: flex;
   justify-content: start;
-  width: 50%;
+  width: 55%;
   margin-left: 2%;
 }
 header .Div-menu {
@@ -361,6 +355,7 @@ header .Div-menu {
   font-weight: 800;
   gap: 1rem;
   margin-right: 2%;
+  font-family: "Lato", sans-serif;
 }
 header .Div-menu a {
   color: black;
@@ -379,6 +374,7 @@ aside {
   height: auto;
   justify-items: center;
   margin-top: 8%;
+  padding: 2%;
 }
 aside h2 {
   margin-bottom: 10px;
@@ -390,6 +386,7 @@ aside form legend {
 }
 aside form div label {
   font-size: 33px;
+  line-height: 3rem;
 }
 aside form input {
   margin: 4px 0 0;

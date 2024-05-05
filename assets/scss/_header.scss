@@ -25,6 +25,8 @@ header {
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 18px;
+    background-color: #ebe3dd;
+    z-index: 5;
 
 
 
@@ -45,7 +47,7 @@ header {
     .Div-logo{
         display: flex;
         justify-content: start;
-        width: 50%;
+        width: 55%;
         margin-left: 2%;
     }
 
@@ -58,6 +60,7 @@ header {
         font-weight: 800;
         gap: 1rem;
         margin-right: 2%;
+        font-family: "Lato", sans-serif;
         a{
             color: black;
         }

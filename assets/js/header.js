@@ -11,7 +11,7 @@ const NosMenu = document.createElement("a");
 const modebouton = document.createElement("button");
 document.body.appendChild(modebouton);
 
-logo.setAttribute("src", "./assets/logo2.png");
+logo.setAttribute("src", "https://debadarkkitchen.com/wp-content/uploads/2023/10/deba-dark-kitchen-home-page-logo.png");
 logo.classList.add("logo"); //ajouter des classes à élément html en dom
 
 
