@@ -19,93 +19,20 @@
     font-style: normal;
   }
   
-// -----------------------écran gsm------------------------------------
-@media screen and (max-width: 480px){
-    .container {
-        display: flex;
-        justify-content: center;
-    }
-    button {
-        background-color: burlywood;
-        display: flex;
-        justify-content: flex-end; 
-        color: #DAA520; /* Couleur du texte du bouton */
-        border-radius: 20%; /* Ajoute des coins arrondis */
-        text-align: center; /* Centre le texte dans le bouton */
-    }
-    .logo{
-        display: flex;
-        justify-content: center;
-    }
-    .search{
-        display: flex;
-        justify-content: end;
-    }
-    .menu{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    } 
-}
 
-// // -----------------------écran tablette------------------------------------
-// @media screen and (min-width: 750px) and (max-width: 1800px){
-//     .container {
-//         display: flex;
-//         justify-content: center;
-//     }
-//     button {
-//         background-color: burlywood;
-//         justify-content: flex-end;
-//         color: brown; /* Couleur du texte du bouton */
-//         border-radius: 20%; /* Ajoute des coins arrondis */
-//         text-align: center; /* Centre le texte dans le bouton */
-//     }
-//     .menu {
-//         display: flex;
-//         justify-content: center;
-//         flex-direction: column;
-//     }
-//     .logo {
-//         display: flex;
-//         justify-content: center;
-//         width: 15%;
-//     } 
-// }
-
-// -----------------------écran pc------------------------------------
 header {
-    background-image: url(https://image.noelshack.com/fichiers/2024/18/4/1714605091-fast-food-fastfoodcity.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    position: fixed;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 18px;
+
+
 
     nav {
         display: flex;
-        flex-direction: column; /* Disposer les éléments horizontalement */
-        justify-content: center;
-        justify-items: center;
-        align-content: center;
-        height: 50vh;
-
-        
+       
     }
-    nav a {
-        display: flex;
-        justify-content:center ;
-        align-items: end;
-        margin-right: 10px;
-        color: var(--header-link-color);
-        text-decoration: none;
-        font-family: "Flamenco", system-ui;
-        font-size: 40px;
-        font-weight: 800;
-
-
-
-        
-    }
-    
-
+  
     .menu {
         display: flex;
         justify-content: center;
@@ -113,21 +40,27 @@ header {
     }
     .logo {
         display: flex;
-        justify-content: center;
-        align-items: center; /* Ajout de la valeur align-items appropriée */
         width: 15%;
     }
     .Div-logo{
         display: flex;
-        justify-content: space-around;
-
+        justify-content: start;
+        width: 50%;
+        margin-left: 2%;
     }
 
-    .Div-menu
-    {
+    .Div-menu{
         display: flex;
-        justify-content: center;
-        
+        justify-content: end;
+        align-items: center;
+        width: 100%;
+        font-size: 1rem;
+        font-weight: 800;
+        gap: 1rem;
+        margin-right: 2%;
+        a{
+            color: black;
+        }
     }
 
     

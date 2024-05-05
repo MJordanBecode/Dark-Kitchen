@@ -16,13 +16,13 @@ logo.classList.add("logo"); //ajouter des classes à élément html en dom
 
 
 Qualite.setAttribute("href","#");//ajouter des liens hypertext
-Qualite.innerText='Qualité';
+Qualite.innerText='Menu';
 
 Contact.setAttribute("href","#");//ajouter des liens hypertext
-Contact.innerText='Contact';
+Contact.innerText='Deals';
 
 NosMenu.setAttribute("href","#");//ajouter des liens hypertext
-NosMenu.innerText='Nos menu ';
+NosMenu.innerText='Restaurants';
 
 divLogo.classList.add("Div-logo");
 

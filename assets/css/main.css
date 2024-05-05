@@ -1,0 +1,399 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+JP:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Flamenco:wght@300;400&display=swap");
+:root {
+  --background-color: #EFE7E1;
+  --text-color: #704929;
+  --link-color: #704929;
+}
+
+.dark-mode {
+  --background-color: #333333;
+  --text-color: #333333;
+  --link-color: #333333;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+}
+
+button {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 40px;
+  padding: 20px;
+}
+button .fa-sun {
+  color: #333333;
+}
+button .fa-moon {
+  color: #EFE7E1;
+}
+
+footer {
+  background-image: url(https://image.noelshack.com/fichiers/2024/18/4/1714605091-fast-food-fastfoodcity.jpg);
+  background-position: center;
+  color: var(--text-color);
+  text-align: center;
+  font-family: "Flamenco";
+  padding: 40px 0;
+}
+footer .footer-container {
+  display: flex;
+  justify-content: space-around;
+}
+footer h2 {
+  letter-spacing: 2px;
+  font-size: 40px;
+}
+footer h3 {
+  margin: 20px 0;
+}
+footer i {
+  color: var(--link-color);
+  font-size: 25px;
+  margin: 0 10px;
+}
+
+@media screen and (min-width: 481px) {
+  footer h2 {
+    letter-spacing: 2px;
+    font-size: 50px;
+  }
+  footer i {
+    color: var(--link-color);
+    font-size: 30px;
+    margin: 0 20px;
+  }
+}
+:root {
+  --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode {
+  --card-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  list-style-type: none;
+}
+
+body main {
+  display: flex;
+  width: auto;
+}
+body main .div-container-menu {
+  padding: 5%;
+  display: flex;
+  flex-wrap: wrap;
+}
+body main .div-container-menu .card-container {
+  justify-content: center;
+  width: 30%;
+  height: auto;
+  border-radius: 30px;
+  background-color: #f5f6f7;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.04), 6px 3px 14px 0px rgba(0, 0, 0, 0.04), 23px 12px 26px 0px rgba(0, 0, 0, 0.03), 53px 27px 35px 0px rgba(0, 0, 0, 0.02), 94px 48px 42px 0px rgba(0, 0, 0, 0.01);
+  margin-top: 8%;
+  border: 1px solid #f0f0f0;
+  padding: 1.667vw 1.25vw;
+  margin-right: 3%;
+  font-family: "Lato", sans-serif;
+}
+body main .div-container-menu .card-container .card {
+  text-align: center;
+}
+body main .div-container-menu .card-container .card:hover img {
+  transform: scale(1.1);
+  transition: ease 1.2s;
+}
+body main .div-container-menu .card-container .card img {
+  width: 100%;
+  padding: 10%;
+}
+body main .div-container-menu .card-container .card p {
+  color: gray;
+  padding: 4%;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-bottom: 15%;
+}
+body main .div-container-menu .card-container .card .parent-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body main .div-container-menu .card-container .card .parent-div .quantite-content {
+  background: #f0f0f0;
+  display: flex;
+  gap: 8px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 5px;
+  padding: 0.833vw;
+  height: 2.917vw;
+}
+body main .div-container-menu .card-container .card .parent-div .quantite-content input {
+  border: none;
+  padding: 0;
+  background: transparent;
+  text-align: center;
+}
+body main .div-container-menu .card-container .card .parent-div .quantite-content i {
+  font-size: 1rem;
+}
+body main .div-container-menu .card-container .card .parent-div .price-content {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+h5 {
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 481px) {
+  main {
+    justify-content: flex-start;
+    width: 70%;
+    margin: 0;
+  }
+  main .div-container-menu {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 0 50%;
+    box-sizing: border-box;
+    margin: 10px;
+  }
+}
+.modal-filter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(40, 37, 37, 0.2);
+  z-index: 999;
+}
+
+.sidebar-menu {
+  background: #fcfdfd;
+  position: fixed;
+  display: block;
+  padding: 2%;
+  right: -1000px;
+  top: 0;
+  transition: right ease-in-out 0.5s;
+  width: 33%;
+  z-index: 99999;
+  overflow-y: auto;
+  max-height: 100%;
+}
+.sidebar-menu .text-shop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8%;
+}
+.sidebar-menu .border-grey {
+  background: #f0f0f0;
+  width: 100%;
+  height: 1px;
+  margin-bottom: 8%;
+}
+.sidebar-menu ul {
+  margin: 0;
+  display: block;
+  position: relative;
+  z-index: 0;
+}
+.sidebar-menu ul .border-div-li {
+  background: #f0f0f0;
+  width: 100%;
+  height: 1px;
+  margin-bottom: 8%;
+  margin-top: 5%;
+}
+.sidebar-menu ul li {
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 16px;
+}
+.sidebar-menu ul li img {
+  width: 25%;
+}
+.sidebar-menu ul li .text-produit {
+  width: 100%;
+  margin-bottom: 6%;
+}
+.sidebar-menu ul li .text-produit h5 {
+  font-size: 1.3rem;
+}
+.sidebar-menu ul li .text-produit input {
+  border: none;
+  padding: 0;
+  background: transparent;
+  text-align: center;
+}
+.sidebar-menu ul li .text-produit .prix {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sidebar-menu ul li .text-produit .prix .quantite-content {
+  background: #f0f0f0;
+  display: flex;
+  gap: 8px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 5px;
+  padding: 0.833vw;
+  height: 2.917vw;
+}
+.sidebar-menu .total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sidebar-menu .total h6 {
+  font-size: 1.3rem;
+}
+.sidebar-menu .checkout-button a {
+  margin-top: 3%;
+  border-radius: 10px;
+  box-shadow: 0px 15px 30px 0px rgba(40, 37, 37, 0.5);
+  padding: 0.417vw 1.25vw 0.417vw 0.417vw;
+  transition: all 0.5s ease-in;
+  font-size: 0.938vw;
+  font-weight: 500;
+  line-height: 120%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.5s ease-in;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+.sidebar-menu .checkout-button a h5 {
+  font-size: 0.7rem;
+}
+.sidebar-menu .checkout-button a i {
+  font-size: 1.2rem;
+}
+.sidebar-menu .checkout-button .outline-a {
+  background: transparent;
+  color: #ff5c00;
+  border: 1px solid #ff5c00;
+  box-shadow: none;
+  transition: all 0.5s ease-in;
+}
+
+:root {
+  --header-link-color: #704929;
+}
+
+.dark-mode {
+  --header-link-color: #333333;
+}
+
+.flamenco-light {
+  font-family: "Flamenco", system-ui;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.flamenco-regular {
+  font-family: "Flamenco", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 18px;
+}
+header nav {
+  display: flex;
+}
+header .menu {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+header .logo {
+  display: flex;
+  width: 15%;
+}
+header .Div-logo {
+  display: flex;
+  justify-content: start;
+  width: 50%;
+  margin-left: 2%;
+}
+header .Div-menu {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 800;
+  gap: 1rem;
+  margin-right: 2%;
+}
+header .Div-menu a {
+  color: black;
+}
+header .dark-mode {
+  background-color: black;
+  color: #333333;
+}
+
+/*aside*/
+aside {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  border-radius: 45px;
+  height: auto;
+  justify-items: center;
+  margin-top: 8%;
+}
+aside h2 {
+  margin-bottom: 10px;
+}
+aside form legend {
+  font-size: 33px;
+  margin-bottom: 3%;
+  margin-top: 2%;
+}
+aside form div label {
+  font-size: 33px;
+}
+aside form input {
+  margin: 4px 0 0;
+  line-height: normal;
+  width: 25px;
+  height: 21px;
+}/*# sourceMappingURL=main.css.map */
